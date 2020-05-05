@@ -1,0 +1,389 @@
+.menu-header {
+    background-color: #085D70;
+    height: 88px;
+    width: 100%;
+    
+}
+
+div.Logo {
+    top: 21.5px;
+    left: 89px;
+    position: absolute;
+    width: 238px;
+    height: 57px;
+    opacity: 1;
+    }
+.menu {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+}
+
+.menu-header a{
+    margin: 24px 60px 24px 60px;
+    float: right;
+    color: white;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    flex-shrink: 1;
+    width:115px;  
+}
+.menu-header a.active{
+    text-decoration: underline;
+    color:white;
+    background-color: none;
+}
+
+
+.description {
+top: 150px;
+left: 100px;
+position: absolute;
+width: 1720px;
+height: 200px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #00000029;
+border-radius: 15px;
+opacity: 1;
+}
+
+.text {
+    top: 101px;
+    left: 61px;
+    position: absolute;
+    width: 1141px;
+    height: 71px;
+}
+
+p   {
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+    color:#707070;
+    font-size:20px;
+}
+
+.createButton {
+    top: 75px;
+    left: 1400px;
+    position: absolute;
+}
+
+button{
+    width:220px;
+    height: 50px;
+    background-color:#ea3f28;
+    border:none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    color:white;
+    font-weight: 600;
+    border-radius: 50px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+#verde{
+    width:220px;
+    height: 50px;
+    background-color:#085D70;
+    border:none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    color:white;
+    font-weight: 600;
+    border-radius: 50px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+.title {
+top: 28px;
+left: 50px;
+position: absolute;
+width: 475px;
+height: 57px;
+text-align: left;
+font: 50px/57px Cooper;
+letter-spacing: 0px;
+color: #EA3F28;
+opacity: 1;
+}
+
+div.createalbums {
+    top: 225px;
+    left: 1500px;
+    position: fixed;
+    width: 220px;
+    height: 50px;
+    background: #EA3F28 0% 0% no-repeat padding-box;
+    border-radius: 50px;
+    opacity: 1;
+}
+
+div.youralbums {
+    top: 178px;
+    left: 150px;
+    position: fixed;
+    width: 475px;
+    height: 57px;
+    text-align: left;
+    font: Black 50px/57px Cooper;
+    letter-spacing: 0px;
+    color: #EA3F28;
+    opacity: 1;
+}
+
+div.background {
+top: 0px;
+left: 0px;
+width: 1920px;
+height: 2509px;
+background: #CBF8F8 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+
+
+
+div.suggested {
+top: 400px;
+left: 100px;
+position: absolute;
+width: 272px;
+height: 35px;
+text-align: left;
+font: bold 30px/35px Cooper;
+letter-spacing: 0px;
+color: #EA3F28;
+opacity: 1;
+}
+
+
+
+h1 {
+
+    top: 501px;
+    left: 26px;
+    
+    position: absolute;
+    width: 283px;
+    height: 35px;
+    text-align: left;
+    font: 30px/35px Cooper;
+    letter-spacing: 0px;
+    color: #EA3F28;
+    opacity: 1;
+    
+}
+
+h2 {
+    top: 546px;
+    left: 26px;
+    position: absolute;
+    width: 100px;
+    height: 27px;
+    text-align: left;
+    font: 20px Segoe UI;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+}
+
+.album-list {
+
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    ;
+    
+
+}
+
+.suggested-albums1{
+
+    top:1173px;
+    position: relative;
+
+}
+
+
+.album-test {
+
+    width: 500px;
+    height: 600px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 15px;
+    opacity: 1;
+}
+
+.picture {
+    
+    display: grid;
+    grid-template-columns: 250px 250px;
+}
+
+.album-1 {
+    top: 485px;
+    left: 100px;
+    position: absolute;
+    width: 500px;
+    height: 600px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 15px;
+    opacity: 1;
+
+}
+
+div.album2 {
+    top: 485px;
+    left: 713px;
+    position: absolute;
+    width: 500px;
+    height: 600px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 15px;
+    opacity: 1;
+ }
+
+ div.album3 {
+    top: 485px;
+    left: 1326px;
+    position: absolute;
+    width: 500px;
+    height: 600px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 15px;
+    opacity: 1;
+ }
+
+.yours {
+    top: 1147px;
+    left: 100px;
+    position: absolute;
+    width: 196px;
+    height: 35px;
+    text-align: left;
+    font: 30px/35px Cooper;
+    letter-spacing: 0px;
+    color: #085D70;
+    opacity: 1;
+}
+
+
+.popupbox {
+    top: 225px;
+    left: 660px;
+    position: fixed;
+    width: 600px;
+    height: 707px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 15px;
+    opacity: 1;
+}
+
+.create {
+    top: 50px;
+    left: 130px;
+    position: absolute;
+    width: 340px;
+    height: 57px;
+    text-align: left;
+    font: bold 50px/57px Cooper;
+    letter-spacing: 0px;
+    color: #085D70;
+    opacity: 1;
+}
+
+.Box {
+    top: 382px;
+    left: 733px;
+    position: fixed;
+    width: 455px;
+    height: 412px;
+    display: grid;
+    
+}
+
+.inputBar {
+    width: 455px;
+    height: 40px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 7px;
+    opacity: 1;
+}
+
+ @media only screen and (max-width:1500px){
+    .logo{
+        margin-left: 70px;
+        margin-right: 500px;
+    }
+
+    .menu-header a{
+        margin: 26px 30px 26px 30px;
+        font-size: 20px;
+    }
+    .button {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width:1300px){
+    .logo{
+        margin-top: 28px;
+        margin-left: 70px;
+        margin-right: 400px;
+    }
+    .menu-header a{
+        margin: 26px 30px 26px 30px;
+        font-size: 30px;
+    }
+    .button {
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width:1000px){
+    .logo{
+        margin-top: 28px;
+        margin-left: 70px;
+        margin-right: 300px;
+    }
+    .menu-header a{
+        margin: 30px 70px 30px 70px;
+        font-size: 30px;
+        width: 150px;
+    }
+    .button {
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width:500px){
+    .logo{
+        margin-top: 28px;
+        margin-left: 70px;
+        margin-right: 50px;
+    }
+    .menu-header a{
+        margin: 30px 70px 30px 30px;
+        font-size: 30px;
+        width: 150px;
+    }
+    .button {
+        margin-bottom: 20px;
+    }
+}
+
