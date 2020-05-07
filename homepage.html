@@ -16,7 +16,7 @@
             </div>
             <a class="active" href="#home">Home</a>
             <a href="#about">About</a>
-            <a href="#login">Log In</a>
+            <a href="#login" id="login-item" >Log In</a>
             </div>
             </div>
         </header>
@@ -38,7 +38,7 @@
                     </p>
                 </div>
                     <div class="main-buttons">
-                        <button type="button" id="buton-secundar">Learn More</button>
+                        <button type="button" id="buton-secundar" >Learn More</button>
                         <button type="button" id="buton-primar">Sign Up</button>
                     </div>
                 </div>
@@ -46,6 +46,27 @@
                     <img id="ilustratie" src="images/flower illustration.svg">
                 </div>  
         </div>
+        <!-- Log in pop up form section-->
+        <div class="bg-form">
+            <div id="log-in-form" class="form">
+                <h1>LOG IN</h1>
+                <form action="">
+                    <div class="form-content">
+                    <label for="email">Email*</label>
+                    <input type="text">
+                    <label for="pwd">Password*</label>
+                    <input type="password" id="pwd">
+                   </div>
+                    <div class="form-buttons">
+                        <button type="button" class="buton-form" id="buton-cancel">Cancel</button>
+                        <button type="button" class="buton-form" >Log in</button>
+                        <button type="button" class="buton-form" id="buton-secundar-L">Sign up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
