@@ -284,7 +284,7 @@ div.album2 {
 
 
 .popupbox {
-    top: 225px;
+    top: 125px;
     left: 660px;
     position: fixed;
     width: 600px;
@@ -309,12 +309,14 @@ div.album2 {
 }
 
 .Box {
-    top: 382px;
-    left: 733px;
-    position: fixed;
+    top: 100px;
+    left: 75px;
+    position: relative;
     width: 455px;
-    height: 412px;
-    display: grid;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
     
 }
 
@@ -325,6 +327,27 @@ div.album2 {
     border: 1px solid #707070;
     border-radius: 7px;
     opacity: 1;
+}
+
+.closebutton {
+
+    left: 545px;
+    top: 20px;
+    position: relative;
+    width: 42px;
+    height: 42px;
+    opacity: 1;
+
+
+}
+
+.popupbuttons {
+
+    top: 611px;
+    left: 60px;
+    position: absolute;
+    display: flex;
+
 }
 
  @media only screen and (max-width:1500px){
