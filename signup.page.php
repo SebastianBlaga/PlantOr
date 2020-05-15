@@ -46,46 +46,27 @@
                     <img id="ilustratie" src="images/flower illustration.svg">
                 </div>  
         </div>
-        <!-- Log in pop up form section-->
-        <div class="bg-form">
-            <div id="log-in-form" class="form">
-                <h1>LOG IN</h1>
-                <form action="">
-                    <div class="form-content">
-                    <label for="email">Email*</label>
-                    <input type="text">
-                    <label for="pwd">Password*</label>
-                    <input type="password" id="pwd">
-                   </div>
-                    <div class="form-buttons">
-                        <button type="button" class="buton-form" id="buton-cancel">Cancel</button>
-                        <button type="button" class="buton-form" id="buton-login">Log in</button>
-                        <button type="button" class="buton-form" id="buton-secundar-L">Sign up</button>
-                    </div>
-                </form>
-            </div>
         </div>
                 <!-- Sign up pop up form section-->
                 <div class="signup-form">
                     <div class="form" id="s-form">
                         <h1>SIGN UP</h1>
-                        <form action="">
+                        <form action="signup.php" method="post">
                             <div class="form-content">
                             <label for="email">Email*</label>
-                            <input type="text">
+                            <input type="text" name="email">
                             <label for="pwd">Password*</label>
-                            <input type="password" id="pwd">
+                            <input type="password" name="pwd">
                             <label for="pwd">Confirm password*</label>
-                            <input type="password" id="pwd">
+                            <input type="password" name="pwd-repeat">
                            </div>
                             <div class="form-buttons">
-                                <button type="button" class="buton-form" id="buton-cancel-2">Cancel</button>
-                                <button type="button" class="buton-form" id="buton-signup" >Sign up</button>
-                                <button type="button" class="buton-form" id="buton-secundar-L2">Log in</button>
+                                <button type="button" class="buton-form" id="buton-cancel-2" onClick="document.location.href='homepage.php'">Cancel</button>
+                                <button type="submit" class="buton-form" id="buton-signup" name="signup-submit" >Sign up</button>
+                                <button type="button" class="buton-form" id="buton-secundar-L2"  onClick="document.location.href='login.page.php'">Log in</button>
                             </div>
                         </form>
                     </div>
                 </div>
-    <script src="script.js"></script>
 </body>
 </html>
