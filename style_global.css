@@ -80,7 +80,7 @@ button{
     background-color: rgb(8,93,112,0.4);
     position: absolute;
     top:0;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -165,7 +165,7 @@ label{
     background-color: rgb(8,93,112,0.4);
     position: absolute;
     top:0;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
