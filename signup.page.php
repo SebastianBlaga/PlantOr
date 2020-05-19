@@ -63,7 +63,29 @@ session_start();
                             <label for="pwd">Confirm password*</label>
                             <input type="password" name="pwd-repeat">
                            </div>
-                           <!--<span class="error" id="emptyErr"><?php echo "errrrrrroareeeee";?></span>-->
+                           <?php
+                           if(isset($_GET['error'])){
+                               if($_GET['error']=="emptyfields")
+                               {
+                                   echo '<span class="error" >*You missed some mandatory fields!</span>';
+                               }
+                               else
+                               if($_GET['error']=="invalidmail")
+                               {
+                                echo '<span class="error" >*Invalid e-mail format!</span>';
+                               }
+                               else
+                               if($_GET['error']=="passwordcheck")
+                               {
+                                echo '<span class="error" >*Your passwords do not match!</span>';
+                               }
+                               else
+                               if($_GET['error']=="emailAlreadyUsed")
+                               {
+                                echo '<span class="error" >*The email address is already used!</span>';
+                               }
+                           }
+                           ?>
                             <div class="form-buttons">
                                 <button type="button" class="buton-form" id="buton-cancel-2" onClick="document.location.href='homepage.php'">Cancel</button>
                                 <button type="submit" class="buton-form" id="buton-signup" name="signup-submit" >Sign up</button>

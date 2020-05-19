@@ -60,6 +60,19 @@ session_start();
                     <label for="pwd">Password*</label>
                     <input type="password" name="pwd">
                    </div>
+                   <?php
+                           if(isset($_GET['error'])){
+                               if($_GET['error']=="emptyfields")
+                               {
+                                   echo '<span class="error" >*You missed some mandatory fields!</span>';
+                               }
+                               else
+                               if($_GET['error']=="wrongPassword")
+                               {
+                                echo '<span class="error" >*Wrong password!</span>';
+                               }
+                           }
+                           ?>
                     <div class="form-buttons">
                         <button type="button" class="buton-form" id="buton-cancel" onClick="document.location.href='homepage.php'">Cancel</button>
                         <button type="submit" class="buton-form" id="buton-login" name="login-submit">Log in</button>
