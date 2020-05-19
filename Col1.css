@@ -118,6 +118,7 @@ padding-top: 10px;
 letter-spacing: 0px;
 color: #FFFFFF;
 opacity: 1;
+text-decoration: none;
 }
 .Tabel{
   top: 400px;
@@ -130,7 +131,7 @@ opacity: 1;
 .Item1{
 width: 100%;
 height: 500px;
-margin: 10px 60px 10px 60px;
+margin: 10px 60px 10px 25px;
 opacity: 1;
 position:relative;
 background-color: white;
@@ -165,7 +166,7 @@ text-align: left;
 }
 .EditButton{
 margin:10px 1px 1px 5px;
-height: 50px;
+height: 35px;
 width: 80%;
 border: 5px solid #EA3F28;
 border-radius: 50px;
@@ -174,11 +175,94 @@ text-align: center;
 }
 .EditTxt{
  padding-top: 10px;
-    font: Bold 20px/27px Segoe UI;
+    font: Bold 100%/100% Segoe UI;
 letter-spacing: 0px;
 color: Red;
 opacity: 1;   
 }
 .Background{
-    background-color: aqua;
+    background-color: #CBF8F8;
+}
+.Background1{
+ top: 0px;
+left: 0px;
+width: 100%;
+height: 2479px;
+background: #085D70 0% 0% no-repeat padding-box;
+border: 1px solid #707070;
+opacity: 0.4;
+}
+.Popupbox{
+    top: 225px;
+left: 30%;
+width: 40%;
+height: 707px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #00000029;
+border-radius: 15px;
+opacity: 1;
+position: absolute;
+z-index: 15;
+display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+.Xbutton{
+margin: 10px 13% 24px 87%;
+}
+.AddPlant{
+margin: 30px 0px 30px 0px;
+text-align: center;
+font: Bold 50px/57px Segoe UI;
+letter-spacing: 0px;
+color: #085D70;
+opacity: 1;
+}
+.TechName{
+margin: 20px 5% 24px 8%;
+height: 27px;
+text-align: left;
+font: Bold 20px/27px Segoe UI;
+letter-spacing: 0px;
+color: #707070;
+opacity: 1;
+}
+.TechName1{
+margin: 0px 5% 0px 5%;
+width: 90%;
+height: 40px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #707070;
+border-radius: 7px;
+opacity: 1;    
+}
+.Submit1{
+margin: 30px 0% 0px 60%;
+width: 30%;
+height: 60px;
+background: #085D70 0% 0% no-repeat padding-box;
+border-radius: 50px;
+border: 5px solid #085D70;
+opacity: 1;   
+position: absolute;
+text-align: center;
+font: Bold 100%/27px Segoe UI;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 1;
+text-decoration: none;
+}
+.Cancel1{
+margin: 30px 0% 0px 10%;
+width: 30%;
+height: 50px;
+border: 5px solid Blue;
+border-radius: 50px;
+opacity: 1;
+text-align: center;   
+text-decoration: none;
+font: Bold 100%/45px Segoe UI;
+letter-spacing: 0px;
+color: #085D70;
+opacity: 1;
 }
