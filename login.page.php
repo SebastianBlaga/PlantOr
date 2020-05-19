@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -47,19 +50,19 @@
                 </div>  
         </div>
         <!-- Log in pop up form section-->
-        <div class="bg-form" action="login.php" method="post">
-            <div id="log-in-form" class="form">
+        <div class="bg-form"  >
+            <div class="form" id="log-in-form" >
                 <h1>LOG IN</h1>
-                <form action="">
+                <form action="login.php" method="post">
                     <div class="form-content">
                     <label for="email">Email*</label>
-                    <input type="text">
+                    <input type="text" name="email">
                     <label for="pwd">Password*</label>
-                    <input type="password" id="pwd">
+                    <input type="password" name="pwd">
                    </div>
                     <div class="form-buttons">
                         <button type="button" class="buton-form" id="buton-cancel" onClick="document.location.href='homepage.php'">Cancel</button>
-                        <button type="button" class="buton-form" id="buton-login">Log in</button>
+                        <button type="submit" class="buton-form" id="buton-login" name="login-submit">Log in</button>
                         <button type="button" class="buton-form" id="buton-secundar-L" onClick="document.location.href='signup.page.php'">Sign up</button>
                     </div>
                 </form>

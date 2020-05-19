@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -60,6 +63,7 @@
                             <label for="pwd">Confirm password*</label>
                             <input type="password" name="pwd-repeat">
                            </div>
+                           <!--<span class="error" id="emptyErr"><?php echo "errrrrrroareeeee";?></span>-->
                             <div class="form-buttons">
                                 <button type="button" class="buton-form" id="buton-cancel-2" onClick="document.location.href='homepage.php'">Cancel</button>
                                 <button type="submit" class="buton-form" id="buton-signup" name="signup-submit" >Sign up</button>

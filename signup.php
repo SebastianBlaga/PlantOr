@@ -7,17 +7,20 @@ if(isset($_POST['signup-submit'])){
     $password = $_POST['pwd'];
     $passwordRepeat = $_POST['pwd-repeat'];
 
+    $emptyErr ="";
+
     if(empty($email) || empty($password) || empty($passwordRepeat)){
-        header("Location:homepage.php?error=emptyfields&email=".$email);
+        header("Location:signup.page.php?error=emptyfields&email=".$email);
+        echo "You missed some mandatory fiels. :(";
         exit();
     }
     else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-        header("Location:homepage.php?error=invalidmail&email=".$email);
+        header("Location:signup.page.php?error=invalidmail&email=".$email);
         exit();
     }
     else if ($password !== $passwordRepeat)
     {
-        header("Location:homepage.php?error=passwordcheck&email=".$email);
+        header("Location:signup.page.php?error=passwordcheck&email=".$email);
         exit();
     }
     else
@@ -25,7 +28,7 @@ if(isset($_POST['signup-submit'])){
        $sql = "SELECT emailUsers FROM users WHERE emailUsers=?";
        $stmt = mysqli_stmt_init($conn);
        if(!mysqli_stmt_prepare($stmt,$sql)){
-        header("Location:homepage.php?error=sqlError");
+        header("Location:signup.page.php?error=sqlError");
         exit();
        }
        else{
@@ -35,7 +38,7 @@ if(isset($_POST['signup-submit'])){
            $resultCheck = mysqli_stmt_num_rows($stmt);
            if($resultCheck > 0)
            {
-            header("Location:homepage.php?error=emailAlreadyUsed&email=".$email);
+            header("Location:signup.page.php?error=emailAlreadyUsed&email=".$email);
             exit(); 
            }
            else
@@ -43,7 +46,7 @@ if(isset($_POST['signup-submit'])){
             $sql = "INSERT INTO users(emailUsers, pwdUsers) VALUES (?,?)";
             $stmt = mysqli_stmt_init($conn);
             if(!mysqli_stmt_prepare($stmt,$sql)){
-                header("Location:homepage.php?error=sqlError");
+                header("Location:signup.page.php?error=sqlError");
                 exit();
                }
                else{
