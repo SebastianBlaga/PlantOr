@@ -9,6 +9,8 @@ session_start();
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style_home.css">
         <link rel="stylesheet" href="style_global.css">
+        <link rel="stylesheet" href="about.css">
+        
         <title>PlantOr</title>
     </head>
     <body>
@@ -18,8 +20,8 @@ session_start();
             <div class="logo">
                 <img id="white-logo" src="images/Logo white.png">
             </div>
-            <a class="active" href="#home">Home</a>
-            <a href="#about" onClick="document.location.href='about.php'">About</a>
+            <a  href="#home" onClick="document.location.href='homepage.php'">Home</a>
+            <a class="active" href="#about">About</a>
             <a href="#login" id="login-item" onClick="document.location.href='login.page.php'">Log In</a>
             </div>
             </div>
@@ -27,27 +29,21 @@ session_start();
         <div class="main-bg">
         <div class="welcome-panel">
             <div id="group-left">
-                <div class="img-container">
-                <img id="color-logo" class="column" src="images/LOGO color.png">
-                </div>
+                <h1>ABOUT PLANTOR</h1>
                 <div class="text">
                 <p>
-                    Create your digital <span class="redtext">herbarium</span>.
+                    <span class="prtext"> PlantOr </span>is a creative web application for a new generation of staging herberiums. <br>
+                    Fun and educational, it allows you to create and customize your herbarium by organizing your plant into albums while learning botany.<br>
+                    <br>The principle is simple: <br><br>
+                    1. Create a <span class="prtext">free acount.</span><br>
+                    2. Just <span class="prtext">snap a picture</span> of a plant or plant cutting, crop it and customize it using different tools.<br><br>
+                    Happy herborazation!
+    
                 <p>
-                    <p>
-                        <span class="redtext">Customize</span> your plant collection.
-                    </p>
-                    <p>
-                        Have your own personalized <span class="redtext">albums</span>.
-                    </p>
                 </div>
-                    <div class="main-buttons">
-                        <button type="button" id="buton-secundar" >Learn More</button>
-                        <button type="button"id="buton-sign-up" onClick="document.location.href='signup.page.php'">Sign Up</button>
-                    </div>
                 </div>
                 <div id="group-right" class="column">
-                    <img id="ilustratie" src="images/flower illustration.svg">
+                    <img id="ilustratie" src="images/abimg.svg">
                 </div>  
         </div>
 </body>

@@ -34,7 +34,7 @@ session_start();
                     <p>Are you sure you want to log out?</p>
                     <div class="form-buttons">
                         <button type="button" class="buton-form" id="buton-cancel" onClick="document.location.href='album.php'">Cancel</button>
-                        <button type="button" class="buton-form" id="buton-logout" onClick= "href=logout.php">Log out</button>
+                        <button type="button" class="buton-form" id="buton-logout" onClick= "document.location.href='logout.php'">Log out</button>
                     </div>
                 </form>
             </div>
