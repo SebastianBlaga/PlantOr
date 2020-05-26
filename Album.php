@@ -21,7 +21,7 @@ session_start();
                     <a href="#collection">Collection</a>
                     <a class="active" href="#albums">Albums</a>
                     <a href="#about">About</a>
-                    <a href="#logout">Log Out</a>
+                    <a href="logoutConfirm.php">Log Out</a>
                 </div>
                 <div class="Logo"> <img src='img/Logo white.png'></div>
         </header>

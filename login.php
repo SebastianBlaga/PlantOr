@@ -34,7 +34,7 @@ else
                 $_SESSION['userId'] = $row['idUsers'];
                 $_SESSION['userEmail'] = $row['emailUsers'];
 
-                header("Location:homepage.php?login=success");
+                header("Location:album.php?login=success");
                 exit();
             }
             else
