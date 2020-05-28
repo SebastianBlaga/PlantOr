@@ -2,7 +2,9 @@ body {
     background: #CBF8F8;
 }
 
-
+img {
+    max-width: 100%;
+}
 .menu-header {
     background-color: #085D70;
     height: 88px;
@@ -49,7 +51,7 @@ top: 150px;
 left: 100px;
 position: absolute;
 width: 90%;
-height: 170px;
+height: 230px;
 background: #FFFFFF 0% 0% no-repeat padding-box;
 box-shadow: 0px 3px 6px #00000029;
 border-radius: 15px;
@@ -73,7 +75,8 @@ p   {
 
 .createButton {
     left: 80%;
-    width: 20%;
+    top: 35%;
+    width: 10%;
     position: inherit;
 }
 
@@ -158,7 +161,7 @@ opacity: 1;
 
 
 div.suggested {
-top: 400px;
+top: 500px;
 left: 100px;
 position: absolute;
 width: 272px;
@@ -173,11 +176,6 @@ opacity: 1;
 
 
 h1 {
-
-    top: 501px;
-    left: 26px;
-    
-    position: absolute;
     width: 283px;
     height: 35px;
     text-align: left;
@@ -189,9 +187,6 @@ h1 {
 }
 
 h2 {
-    top: 546px;
-    left: 26px;
-    position: absolute;
     width: 100px;
     height: 27px;
     text-align: left;
@@ -215,7 +210,7 @@ h2 {
 
 .suggested-albums1{
 
-    top:1173px;
+    top:673px;
     position: relative;
 
 }
@@ -223,8 +218,8 @@ h2 {
 
 .album-test {
 
-    width: 500px;
-    height: 600px;
+    width: 26.5%;
+    height: auto;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 15px;
@@ -234,48 +229,24 @@ h2 {
 .picture {
     
     display: grid;
-    grid-template-columns: 250px 250px;
+    grid-template-columns: 50% 50%;
 }
 
-.album-1 {
-    top: 485px;
-    left: 100px;
-    position: absolute;
-    width: 500px;
-    height: 600px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px #00000029;
-    border-radius: 15px;
-    opacity: 1;
+.picture .art {
+    width: 100%;
 
 }
 
-div.album2 {
+.my-albums {
     top: 485px;
-    left: 713px;
-    position: absolute;
-    width: 500px;
-    height: 600px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px #00000029;
-    border-radius: 15px;
-    opacity: 1;
- }
+    position: relative;
 
- div.album3 {
-    top: 485px;
-    left: 1326px;
-    position: absolute;
-    width: 500px;
-    height: 600px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px #00000029;
-    border-radius: 15px;
-    opacity: 1;
- }
+}
+
+
 
 .yours {
-    top: 1147px;
+    top: 1327px;
     left: 100px;
     position: absolute;
     width: 196px;

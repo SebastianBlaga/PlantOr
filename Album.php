@@ -41,39 +41,40 @@ session_start();
         <div class="suggested">Suggested albums</div>
 
 
-        <div class="album-1">
-            <div class="picture">
-                <div><img src="img/frunze.png"></div>
-                <div><img src="img/frunze.png"></div>
-                <div><img src="img/frunze.png"></div>
-                <div><img src="img/frunze.png"></div>
+        <div class="my-albums">
+            <div class="album-list">
+                <div class="album-test">
+                    <div class="picture">
+                        <img class="art" src="img/frunze.png"/>
+                        <img class="art" src="img/frunze.png"/>
+                        <img class="art" src="img/frunze.png"/>
+                        <img class="art" src="img/frunze.png"/>
+                    </div>
+                    <h1>Suggested album 1</h1>
+                    <h2>120 plants</h2>
+                </div>
+                <div class="album-test">
+                    <div class="picture">
+                        <img class="art" src="img/frunze.png"/>
+                        <img class="art" src="img/frunze.png"/>
+                        <img class="art" src="img/frunze.png"/>
+                        <img class="art" src="img/frunze.png"/>
+                    </div>
+                    <h1>Suggested album 1</h1>
+                    <h2>120 plants</h2>
+                </div>
+                <div class="album-test">
+                 <div class="picture">
+                    <img class="art" src="img/frunze.png"/>
+                    <img class="art" src="img/frunze.png"/>
+                    <img class="art" src="img/frunze.png"/>
+                    <img class="art" src="img/frunze.png"/>
+                 </div>
+                    <h1>Suggested album 1</h1>
+                    <h2>120 plants</h2>     
+                </div>
             </div>
-            <h1>Suggested album 1</h1>
-            <h2>120 plants</h2>
         </div>
-        <div class="album2">
-            <div class="picture">
-                <div><img src="img/frunze.png"></div>
-                <div><img src="img/frunze.png"></div>
-                <div><img src="img/frunze.png"></div>
-                <div><img src="img/frunze.png"></div>
-                <h1>Suggested album 1</h1>
-                <h2>120 plants</h2>
-            </div>
-        </div>
-
-        <div class="album3">
-            <div class="picture">
-                <div><img src="img/frunze.png"></div>
-                <div><img src="img/frunze.png"></div>
-                <div><img src="img/frunze.png"></div>
-                <div><img src="img/frunze.png"></div>
-                <h1>Suggested album 1</h1>
-                <h2>120 plants</h2>
-            </div>
-        </div>
-
-
 
 
         <div class="yours">Your albums</div>
@@ -82,33 +83,33 @@ session_start();
             <div class="album-list">
                 <div class="album-test">
                     <div class="picture">
-                        <div><img src="img/frunze.png"></div>
-                        <div><img src="img/frunze.png"></div>
-                        <div><img src="img/frunze.png"></div>
-                        <div><img src="img/frunze.png"></div>
-
+                        <img class="art" src="img/frunze.png"/>
+                        <img class="art" src="img/frunze.png"/>
+                        <img class="art" src="img/frunze.png"/>
+                        <img class="art" src="img/frunze.png"/>
                     </div>
-
-
+                    <h1>My album 1</h1>
+                    <h2>120 plants</h2>
                 </div>
                 <div class="album-test">
                     <div class="picture">
-                        <div><img src="img/frunze.png"></div>
-                        <div><img src="img/frunze.png"></div>
-                        <div><img src="img/frunze.png"></div>
-                        <div><img src="img/frunze.png"></div>
-
+                        <img class="art" src="img/frunze.png"/>
+                        <img class="art" src="img/frunze.png"/>
+                        <img class="art" src="img/frunze.png"/>
+                        <img class="art" src="img/frunze.png"/>
                     </div>
-
+                    <h1>My album 1</h1>
+                    <h2>120 plants</h2>
                 </div>
                 <div class="album-test">
                     <div class="picture">
-                        <div><img src="img/frunze.png"></div>
-                        <div><img src="img/frunze.png"></div>
-                        <div><img src="img/frunze.png"></div>
-                        <div><img src="img/frunze.png"></div>
+                        <img class="art" src="img/frunze.png"/>
+                        <img class="art" src="img/frunze.png"/>
+                        <img class="art" src="img/frunze.png"/>
+                        <img class="art" src="img/frunze.png"/>
                     </div>
-
+                    <h1>My album 1</h1>
+                    <h2>120 plants</h2>
                 </div>
             </div>
         </div>
@@ -117,27 +118,33 @@ session_start();
             <div class="album-list">
                 <div class="album-test">
                     <div class="picture">
-                        <div><img src="img/frunze.png"></div>
-                        <div><img src="img/frunze.png"></div>
-                        <div><img src="img/frunze.png"></div>
-                        <div><img src="img/frunze.png"></div>
+                        <img class="art" src="img/frunze.png"/>
+                        <img class="art" src="img/frunze.png"/>
+                        <img class="art" src="img/frunze.png"/>
+                        <img class="art" src="img/frunze.png"/>
                     </div>
+                    <h1>My album 1</h1>
+                    <h2>120 plants</h2>
                 </div>
                 <div class="album-test">
                     <div class="picture">
-                        <div><img src="img/frunze.png"></div>
-                        <div><img src="img/frunze.png"></div>
-                        <div><img src="img/frunze.png"></div>
-                        <div><img src="img/frunze.png"></div>
+                        <img class="art" src="img/frunze.png"/>
+                        <img class="art" src="img/frunze.png"/>
+                        <img class="art" src="img/frunze.png"/>
+                        <img class="art" src="img/frunze.png"/>
                     </div>
+                    <h1>My album 1</h1>
+                    <h2>120 plants</h2>
                 </div>
                 <div class="album-test">
                     <div class="picture">
-                        <div><img src="img/frunze.png"></div>
-                        <div><img src="img/frunze.png"></div>
-                        <div><img src="img/frunze.png"></div>
-                        <div><img src="img/frunze.png"></div>
+                        <img class="art" src="img/frunze.png"/>
+                        <img class="art" src="img/frunze.png"/>
+                        <img class="art" src="img/frunze.png"/>
+                        <img class="art" src="img/frunze.png"/>
                     </div>
+                    <h1>My album 1</h1>
+                    <h2>120 plants</h2>
                 </div>
             </div>
         </div>
