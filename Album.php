@@ -13,7 +13,7 @@ session_start();
 </head>
 
 <body>
-    <div class="background">
+    
         <header>
             <div class="menu-header">
                 <div class="menu">
@@ -142,7 +142,7 @@ session_start();
             </div>
         </div>
 
-    </div>
+    
 </body>
 
 
