@@ -1,0 +1,14 @@
+header {
+    filter: blur(2px);
+}
+.bg-form
+{
+    filter: blur(0);
+}
+.form
+{
+    height: 300px;
+}
+.form-buttons{
+    margin-top:30px;
+}

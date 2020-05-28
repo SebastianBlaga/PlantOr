@@ -1,0 +1,19 @@
+h1{
+    color:rgb(98, 43, 226);
+}
+.text{
+    padding-left: 0;
+}
+
+#group-left{
+    margin-top:5%;
+}
+
+.prtext{
+    color:rgb(80, 185, 255);
+    font-weight: 600;
+}
+
+#group-right{
+    margin-top:5%;
+}
