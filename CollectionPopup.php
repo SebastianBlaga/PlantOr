@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="Col1.css">
+        <link rel="stylesheet" href="Collection.css">
         <title>PlantOr</title>
     </head>
     <div class="Popupbox">
@@ -36,7 +36,9 @@
   <option value="mercedes">Mercedes</option>
   <option value="audi">Audi</option>
         </select><br>
-
+<label for="fname" class="TechName">Picture*</label><br>
+<label for="fname" class="TechName4">Choose file</label>
+<input type="file" id="img" name="img" accept="image/*" class="TechName3">
   <input type="submit" value="Sign Up" class="Submit1">      
 </form> 
   <a class="Cancel1" href="Da">Cancel</a>  
