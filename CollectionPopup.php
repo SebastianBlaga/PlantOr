@@ -10,38 +10,48 @@
     <a class="Xbutton" href="Da">  <img src="Poze/x%20button.svg" alt="Poza"></a>
     <div class="AddPlant">Add Plant</div>
         
-    <form action="/action_page.php">
-  <label for="fname" class="TechName">Techncal Name*</label><br>
-  <input type="text" id="fname" class="TechName1"><br><br>
-  <label for="fname" class="TechName">Common Name*</label><br>
-  <input type="text" id="fname" class="TechName1"><br><br>
-  <label for="fname" class="TechName">Plant Group*</label><br>
-  <select class="TechName2">
+    <form action="add_plant.php" method="post">
+  <label for="TechnicalName" class="TechName">Techncal Name*</label><br>
+  <input type="text" name="TN" id="fname" class="TechName1"><br><br>
+  <label for="CommonName" class="TechName">Common Name*</label><br>
+  <input type="text" id="fname" name="CN" class="TechName1"><br><br>
+  <label for="PlantGroup" class="TechName">Plant Group*</label><br>
+  <select class="TechName2" name="PG">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+        </select>
+  <label for="Family" class="TechName" >Family*</label><br>
+  <select class="TechName2" name="Family">
              <option value="volvo">Volvo</option>
   <option value="saab">Saab</option>
   <option value="mercedes">Mercedes</option>
   <option value="audi">Audi</option>
         </select>
-  <label for="fname" class="TechName">Family*</label><br>
-  <select class="TechName2">
-             <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
-        </select>
-  <label for="fname" class="TechName">Species*</label><br>
-        <select class="TechName2">
+  <label for="Species" class="TechName">Species*</label><br>
+        <select class="TechName2" name="Species">
              <option value="volvo">Volvo</option>
   <option value="saab">Saab</option>
   <option value="mercedes">Mercedes</option>
   <option value="audi">Audi</option>
         </select><br>
-<label for="fname" class="TechName">Picture*</label><br>
-<label for="fname" class="TechName4">Choose file</label>
+<label for="Picture" class="TechName">Picture*</label><br>
+<label for="Picture" class="TechName4">Choose file</label>
 <input type="file" id="img" name="img" accept="image/*" class="TechName3">
-  <input type="submit" value="Sign Up" class="Submit1">      
+<?php
+                           if(isset($_GET['error'])){
+                               if($_GET['error']=="emptyfields")
+                               {
+                                   echo '<span class="error" >*You missed some mandatory fields!</span>';
+                               }
+                           }
+?>
+<div class="buttons2">
+  <div class="Cancel1" href="Da">Cancel</div> 
+  <input type="submit" value="Add Plant" name="Submit1" class="Submit1"> 
+</div>
 </form> 
-  <a class="Cancel1" href="Da">Cancel</a>  
     </div>
     <body class="Background">
     <div class="Background1">
