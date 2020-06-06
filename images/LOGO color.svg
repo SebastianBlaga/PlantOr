@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="522" height="136" viewBox="0 0 522 136">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #ea3f28;
+      }
+
+      .cls-1, .cls-2 {
+        font-size: 119px;
+        font-family: CooperBlack, Cooper;
+      }
+
+      .cls-2 {
+        fill: #5accc6;
+      }
+    </style>
+  </defs>
+  <g id="LOGO_color" data-name="LOGO color" transform="translate(-127.8 -283)">
+    <text id="Plant" class="cls-1" transform="translate(156 392)"><tspan x="0" y="0">Plant</tspan></text>
+    <text id="Or" class="cls-2" transform="translate(492.8 392)"><tspan x="0" y="0">Or</tspan></text>
+    <path id="Path_10" data-name="Path 10" class="cls-3" d="M1.832,1.241C6.1-2.479,18.065,2.5,26.573,11.691S35.865,38,35.865,38,18.021,35.759,9.512,26.57-2.434,4.96,1.832,1.241Z" transform="matrix(0.978, 0.208, -0.208, 0.978, 135.7, 329.331)"/>
+  </g>
+</svg>

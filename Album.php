@@ -20,8 +20,8 @@ session_start();
                     <a href="#statistics">Statistics</a>
                     <a href="#collection">Collection</a>
                     <a class="active" href="#albums">Albums</a>
-                    <a href="#about">About</a>
-                    <a href="#logout">Log Out</a>
+                    <a href="#about" onClick="document.location.href='about.php'">About</a>
+                    <a href="logoutConfirm.php">Log Out</a>
                 </div>
                 <div class="Logo"> <img src='img/Logo white.png'></div>
         </header>
