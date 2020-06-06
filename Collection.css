@@ -16,6 +16,13 @@
     flex-direction: row;
     justify-content: flex-end;
 }
+.buttons2{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 10px;
+}
+}
 .menu {
 
     display: flex;
@@ -262,33 +269,60 @@ border: 1px solid #707070;
 border-radius: 7px;
 opacity: 1;    
 }
-.Submit1{
-margin: 30px 0% 0px 60%;
-width: 30%;
-height: 60px;
+.TechName3{
+margin: 0px 5% 0px 5%;
+height: 50px;
+width: 90%;
 background: #085D70 0% 0% no-repeat padding-box;
+border-radius: 50px;
+border: 5px solid #085D70;
+opacity: 1;
+text-align: center;
+font: Bold 100%/27px Segoe UI;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 0;
+text-decoration: none;
+}
+.TechName4{
+margin: 0px 5% 0px 5%;
+height: 50px;
+width: 90%;
+background: white 0% 0% no-repeat padding-box;
 border-radius: 50px;
 border: 5px solid #085D70;
 opacity: 1;   
 position: absolute;
 text-align: center;
-font: Bold 100%/27px Segoe UI;
+font: Bold 100%/250% Segoe UI;
+letter-spacing: 0px;
+color: #085D70;
+opacity: 1;
+text-decoration: none;
+}
+.Submit1{
+width: 50%;
+height: 60px;
+background: #085D70 0% 0% no-repeat padding-box;
+border-radius: 50px;
+border: 5px solid #085D70;
+opacity: 1;
+text-align: center;
+font: Bold 20px/45px Segoe UI;
 letter-spacing: 0px;
 color: #FFFFFF;
 opacity: 1;
 text-decoration: none;
 }
 .Cancel1{
-margin: 30px 0% 0px 10%;
-width: 30%;
+width: 50%;
 height: 50px;
-border: 5px solid Blue;
+border: 5px solid #085D70;
 border-radius: 50px;
 opacity: 1;
 text-align: center;   
 text-decoration: none;
-font: Bold 100%/45px Segoe UI;
+font: Bold 20px/45px Segoe UI;
 letter-spacing: 0px;
 color: #085D70;
-opacity: 1;
 }
