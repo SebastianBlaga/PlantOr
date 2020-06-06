@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="Col1.css">
+        <link rel="stylesheet" href="Collection.css">
         <title>PlantOr</title>
     </head>
     <body class="Background">
