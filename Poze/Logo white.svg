@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="239.091" height="57" viewBox="0 0 239.091 57">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fafafa;
+        font-size: 50px;
+        font-family: CooperBlack, Cooper;
+        letter-spacing: 0.08em;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Logo_white" data-name="Logo white" transform="translate(-88.909 -22)">
+    <text id="PlantOr" class="cls-1" transform="translate(100 68)"><tspan x="0" y="0">PlantOr</tspan></text>
+    <path id="Path_9" data-name="Path 9" class="cls-2" d="M1.2.3c1.577-1.376,6,.466,9.149,3.864s3.436,9.728,3.436,9.728-6.6-.828-9.745-4.226S-.379,1.672,1.2.3Z" transform="matrix(0.978, 0.208, -0.208, 0.978, 91.287, 42.504)"/>
+  </g>
+</svg>
