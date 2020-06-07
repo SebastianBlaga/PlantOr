@@ -15,6 +15,19 @@ if(empty($TN) || empty($CN) || empty($PG) || empty($Family) || empty($Species))
     header("Location:CollectionPopup.php?error=emptyfields");
     exit();
 }
+else
+{
+    $sql = "INSERT INTO plants 
+    ( idUser,TechnicalName,CommonName,PlantGroup,Species,Family,Picture)
+VALUES 
+( 1,'$TN', '$CN','$PG','$Species','$Family','$img');";
+    
+   if(mysqli_query($conn, $sql)){
+    echo "Records inserted successfully.";
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
+}
+}
 }
 else{
     header("Location:Collection.php");
