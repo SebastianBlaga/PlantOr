@@ -42,15 +42,15 @@ session_start();
 
 
         <div class="my-albums">
-            <div class="album-list">
-                <div class="album-test">
+            
+                <div class="album-test" onClick="document.location.href='signup.page.php'">
                     <div class="picture">
                         <img class="art" src="img/frunze.png"/>
                         <img class="art" src="img/frunze.png"/>
                         <img class="art" src="img/frunze.png"/>
                         <img class="art" src="img/frunze.png"/>
                     </div>
-                    <h1>Suggested album 1</h1>
+                    <h1>Medical plants</h1>
                     <h2>120 plants</h2>
                 </div>
                 <div class="album-test">
@@ -73,7 +73,7 @@ session_start();
                     <h1>Suggested album 1</h1>
                     <h2>120 plants</h2>     
                 </div>
-            </div>
+            
         </div>
 
 
