@@ -87,7 +87,7 @@
     <div class=J3>
     <div class=Item1>
         <div class=C1>
-        <img src="Poze/img_mountains.jpg" alt="Poza" class=p1>
+        <img src="poza.php?id=4" alt="Poza" class=p1>
         </div>
         <div class=C>
         <div class=Tname>Technical name</div>
