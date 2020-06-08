@@ -15,11 +15,11 @@ require 'db.php';
          <header>
             <div class="menu-header">
                 <div class="menu">
-                    <a href="#statistics">Statistics</a>
-                    <a href="#collection">Collection</a>
-                    <a class="active" href="#albums">Albums</a>
-                    <a href="#about" onClick="document.location.href='about.php'">About</a>
                     <a href="logoutConfirm.php">Log Out</a>
+                    <a href="#about" onClick="document.location.href='about.php'">About</a>
+                    <a class="active" href="#albums">Albums</a>
+                    <a href="#collection">Collection</a>
+                    <a href="#statistics">Statistics</a>
                 </div>
                 <div class="Logo"> <img src='Poze/Logo%20white.svg'></div>
              </div>
@@ -43,9 +43,11 @@ require 'db.php';
 <?php 
         $sql = "SELECT * FROM plants";
         $result = $conn->query($sql);
-$count=0;
         if ($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()){
+        $count=$result->num_rows;
+        if($count % 2==0)
+            $count=$count+1;
+        while($row = $result->fetch_row()){
             if($count % 2==1)
             {
             // output data of each row
@@ -56,23 +58,23 @@ $count=0;
        echo' <div class=C>';
        echo' <div class=Tname>Technical name</div>';
        echo' <div class=Srn1>';
-           echo TN($count,1);
+           echo TN($row[7],1);
            echo '</div>';
        echo' <div class=Tname>Common name</div>';
        echo' <div class=Srn1>';
-           echo CN($count,1);
+           echo CN($row[7],1);
            echo '</div>';
        echo' <div class=Tname>Plant group</div>';
        echo' <div class=Srn1>';
-           echo PG($count,1);
+           echo PG($row[7],1);
            echo '</div>';
        echo' <div class=Tname>Family</div>';
         echo'<div class=Srn1>';
-           echo Family($count,1);
+           echo Family($row[7],1);
            echo '</div>';
         echo'<div class=Tname>Species</div>';
        echo' <div class=Srn1>';
-           echo Species($count,1);
+           echo Species($row[7],1);
            echo '</div>';
        echo' <div class=EditButton onclick="document.location.href=\'editpopup.php\'">';
        echo'     <div class=EditTxt>Edit</div>';
@@ -83,7 +85,7 @@ $count=0;
       echo'  </div>    ';
    echo' </div>';
             }
-        $count=$count+1;
+        $count=$count-1;
         }
         }
 ?>
@@ -92,9 +94,11 @@ $count=0;
 <?php 
         $sql = "SELECT * FROM plants";
         $result = $conn->query($sql);
-$count=1;
         if ($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()){
+            $count=$result->num_rows;
+            if($count % 2==0)
+            $count=$count+1;
+        while($row = $result->fetch_row()){
             if($count % 2==0)
             {
             // output data of each row
@@ -105,23 +109,23 @@ $count=1;
        echo' <div class=C>';
        echo' <div class=Tname>Technical name</div>';
        echo' <div class=Srn1>';
-           echo TN($count,1);
+           echo TN($row[7],1);
            echo '</div>';
        echo' <div class=Tname>Common name</div>';
        echo' <div class=Srn1>';
-           echo CN($count,1);
+           echo CN($row[7],1);
            echo '</div>';
        echo' <div class=Tname>Plant group</div>';
        echo' <div class=Srn1>';
-           echo PG($count,1);
+           echo PG($row[7],1);
            echo '</div>';
        echo' <div class=Tname>Family</div>';
         echo'<div class=Srn1>';
-           echo Family($count,1);
+           echo Family($row[7],1);
            echo '</div>';
         echo'<div class=Tname>Species</div>';
        echo' <div class=Srn1>';
-           echo Species($count,1);
+           echo Species($row[7],1);
            echo '</div>';
            echo' <div class=EditButton onclick="document.location.href=\'editpopup.php\'">';
        echo'     <div class=EditTxt>Edit</div>';
@@ -132,7 +136,7 @@ $count=1;
       echo'  </div>    ';
    echo' </div>';
             }
-        $count=$count+1;
+        $count=$count-1;
         }
         }
 ?>        
