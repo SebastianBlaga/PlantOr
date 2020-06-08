@@ -18,8 +18,8 @@ require 'db.php';
                     <a href="#statistics">Statistics</a>
                     <a href="#collection">Collection</a>
                     <a class="active" href="#albums">Albums</a>
-                    <a href="#about">About</a>
-                    <a href="#logout">Log Out</a>
+                    <a href="#about" onClick="document.location.href='about.php'">About</a>
+                    <a href="logoutConfirm.php">Log Out</a>
                 </div>
                 <div class="Logo"> <img src='Poze/Logo%20white.svg'></div>
              </div>
@@ -45,7 +45,7 @@ require 'db.php';
 <?php 
         $sql = "SELECT * FROM plants";
         $result = $conn->query($sql);
-$count=1;
+$count=0;
         if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()){
             if($count % 2==1)
@@ -94,7 +94,7 @@ $count=1;
 <?php 
         $sql = "SELECT * FROM plants";
         $result = $conn->query($sql);
-$count=2;
+$count=1;
         if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()){
             if($count % 2==0)
