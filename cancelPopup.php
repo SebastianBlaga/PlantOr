@@ -11,6 +11,7 @@ session_start();
         <link rel="stylesheet" href="style_home.css">
         <link rel="stylesheet" href="style_global.css">
         <link rel="stylesheet" href="logoutpopup.css">
+        <link rel="stylesheet" href="green-popup.css">
         <title>PlantOr</title>
     </head>
     <body>
@@ -33,11 +34,11 @@ session_start();
         <div class="bg-form"  >
             <div class="form" id="log-in-form" >
             <span class="close-x" onClick="document.location.href='album.php'" >&times;</span>
-                <h1>LOG OUT</h1>
-                    <p>Are you sure you want to log out?</p>
+                    <p class="no-title">Are you sure you want to cancel the edit?</p><br>
+                    <p>All unsaved data will be lost.</p>
                     <div class="form-buttons">
-                        <button type="button" class="buton-form" id="buton-cancel" onClick="document.location.href='album.php'">Cancel</button>
-                        <button type="button" class="buton-form" id="buton-logout" onClick= "document.location.href='logout.php'">Log out</button>
+                        <button type="button" class="buton-form" id="buton-cancel" >Go back</button>
+                        <button type="button" class="buton-form" id="buton-logout" >Cancel</button>
                     </div>
                 </form>
             </div>

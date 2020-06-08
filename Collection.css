@@ -1,0 +1,330 @@
+.body{
+    background-color: #cbf8f8;
+    background-position: center;
+}
+
+.menu-header{
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    background-color: #085D70;
+    height: 80px;
+    width: 100%;
+}
+.menu-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.buttons2{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 10px;
+}
+}
+.menu {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0px 0px 0px 50%;
+}
+div.Logo {
+    top: 21.5px;
+    left: 50px;
+    position: absolute;
+    height: 57px;
+    opacity: 1;
+    }
+.menu-header a{
+    margin: 20px 1% 23px 1%;
+    float: right;
+    color: white;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    flex-shrink: 1;
+}
+.menu-header a.active{
+    text-decoration: underline;
+    color:white;
+    background-color: none;
+}
+.logo{
+    margin: 22px;
+    margin-left: 80px;
+    margin-right: 560px;
+    flex-shrink: 1;
+    width:20%;
+    height: 15%;
+}
+.menu-header img{
+    width: 60%;
+    height: 70%;
+}
+.Bara2{
+    top: 130px;
+left: 5%;
+width: 90%;
+height: 200px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #00000029;
+border-radius: 15px;
+opacity: 1;
+    position: absolute;
+}
+.Bara2Items{
+  display: flex;
+    flex-direction: row;
+    justify-content: flex-end;   
+}
+.J1{
+    width: 80%;
+    float: left;
+}
+.J2{  
+    
+    width: 20%;
+    float:left;
+}
+.J3{
+     top: 0%;
+left: 5%;
+width: 40%;
+height: 7500px;
+opacity: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+.J4{ top: 0%;
+left: 55%;
+width: 40%;
+height: 7500px;
+opacity: 1;
+position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+.PlantCol{
+   margin: 30px 10px 10px 10px;
+text-align: left;
+font: Bold 35px/45px Cooper;
+letter-spacing: 0px;
+color: #EA3F28;
+opacity: 1;
+}
+.PlantColText{
+    margin: 30px 10px 10px 10px;
+text-align: left;
+font: Regular 20px/27px Segoe UI;
+letter-spacing: 0px;
+color: #707070;
+opacity: 1;
+}
+.button1{
+margin: 90px 10px 10px 10px;
+height: 50px;
+text-align: center;
+background: #EA3F28 0% 0% no-repeat padding-box;
+border-radius: 50px;
+opacity: 1;
+}
+.buttonText1{
+padding-top: 10px;
+    font: Bold 20px/27px Segoe UI;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 1;
+text-decoration: none;
+}
+.Tabel{
+  top: 400px;
+left: 5%;
+width: 90%;
+height: 1000px;
+opacity: 1;
+    position: absolute;
+}
+.Item1{
+width: 100%;
+height: 500px;
+margin: 10px 60px 10px 25px;
+opacity: 1;
+position:relative;
+background-color: white;
+}
+.p1{
+    top: 0px;
+left: 0px;
+width: 50%;
+height: 500px;
+}
+.C{
+top: 0px;
+left: 50%;
+width: 50%;
+height: 500px;
+position: absolute;
+display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+.Tname{
+margin:10px 1px 1px 5px;
+text-align: left;
+font: Bold 100%/100% Segoe UI;
+color: #085D70;
+opacity: 1;
+}
+.Srn1{
+margin:10px 1px 1px 5px;
+text-align: left;
+width: 100%;
+height: 27px;
+text-align: left;
+}
+.EditButton{
+margin:10px 1px 1px 5px;
+height: 35px;
+width: 80%;
+border: 5px solid #EA3F28;
+border-radius: 50px;
+opacity: 1;
+text-align: center;
+}
+.EditTxt{
+ padding-top: 10px;
+    font: Bold 100%/100% Segoe UI;
+letter-spacing: 0px;
+color: Red;
+opacity: 1;   
+}
+.Background{
+    background-color: #CBF8F8;
+}
+.Background1{
+ top: 0px;
+left: 0px;
+width: 100%;
+height: 2479px;
+opacity: 0.4;
+position: absolute;
+}
+.Popupbox{
+    top: 25px;
+left: 30%;
+width: 40%;
+height: 707px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #00000029;
+border-radius: 15px;
+opacity: 1;
+position: absolute;
+z-index: 15;
+display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+.Xbutton{
+position: absolute;
+top:10px;
+right: 10px;
+}
+.AddPlant{
+margin: 30px 0px 30px 0px;
+text-align: center;
+font: Bold 50px/57px Segoe UI;
+letter-spacing: 0px;
+color: #085D70;
+opacity: 1;
+}
+.TechName{
+margin: 20px 5% 24px 8%;
+height: 27px;
+text-align: left;
+font: Bold 20px/27px Segoe UI;
+letter-spacing: 0px;
+color: #707070;
+opacity: 1;
+}
+.TechName1{
+margin: 0px 5% 0px 5%;
+width: 90%;
+height: 40px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #707070;
+border-radius: 7px;
+opacity: 1;    
+}
+.TechName2{
+margin: 0px 5% 0px 5%;
+width: 90%;
+height: 40px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #707070;
+border-radius: 7px;
+opacity: 1;    
+}
+.TechName3{
+margin: 0px 5% 0px 5%;
+height: 50px;
+width: 90%;
+background: #085D70 0% 0% no-repeat padding-box;
+border-radius: 50px;
+border: 5px solid #085D70;
+opacity: 1;
+text-align: center;
+font: Bold 100%/27px Segoe UI;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 0;
+text-decoration: none;
+}
+.TechName4{
+margin: 0px 5% 0px 5%;
+height: 50px;
+width: 90%;
+background: white 0% 0% no-repeat padding-box;
+border-radius: 50px;
+border: 5px solid #085D70;
+opacity: 1;   
+position: absolute;
+text-align: center;
+font: Bold 100%/250% Segoe UI;
+letter-spacing: 0px;
+color: #085D70;
+opacity: 1;
+text-decoration: none;
+}
+.Submit1{
+width: 50%;
+height: 60px;
+background: #085D70 0% 0% no-repeat padding-box;
+border-radius: 50px;
+border: 5px solid #085D70;
+opacity: 1;
+text-align: center;
+font: Bold 20px/45px Segoe UI;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 1;
+text-decoration: none;
+}
+.Cancel1{
+width: 50%;
+height: 50px;
+border: 5px solid #085D70;
+border-radius: 50px;
+opacity: 1;
+text-align: center;   
+text-decoration: none;
+font: Bold 20px/45px Segoe UI;
+letter-spacing: 0px;
+color: #085D70;
+}
