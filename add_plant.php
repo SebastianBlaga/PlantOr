@@ -23,7 +23,8 @@ VALUES
 ( 1,'$TN', '$CN','$PG','$Species','$Family','$img');";
     
    if(mysqli_query($conn, $sql)){
-    echo "Records inserted successfully.";
+    header("Location:Collection.php");
+    exit();
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
 }
