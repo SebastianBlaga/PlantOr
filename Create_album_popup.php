@@ -1,7 +1,6 @@
 <?php
-session_start();
+require 'create_album.php';
 ?>
-
 <!DOCTYPE HTML>
 <html lang="en">
 
@@ -101,6 +100,11 @@ session_start();
                     <h1>My album 1</h1>
                     <h2>120 plants</h2>
                 </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="suggested-albums1">
+            <div class="album-list">
                 <div class="album-test">
                     <div class="picture">
                         <img class="art" src="img/frunze.png"/>
@@ -111,28 +115,6 @@ session_start();
                     <h1>My album 1</h1>
                     <h2>120 plants</h2>
                 </div>
-            </div>
-        </div>
-        <br><br>
-        <div class="suggested-albums1">
-            <div class="album-list">
-            <?php
-                if ($_GET['error']=="noerror")
-                {
-                    
-                    echo '<div class="album-test">
-                    <div class="picture">
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                    </div>
-                    <h1>My album 1</h1>
-                    <h2>120 plants</h2>
-                </div>';
-            
-                }
-                ?>
                 <div class="album-test">
                     <div class="picture">
                         <img class="art" src="img/frunze.png"/>
@@ -159,5 +141,35 @@ session_start();
     
 </body>
 
-
+<div class="popupbox">
+    <div class="create">Add album</div>
+    <div class="Box">
+    <form action="create_album.php" method="post">
+        <p>Album name</p>
+        <input type="text" name="albumname">
+        <p>Select plant groups</p>
+        <input type="text" name="email">
+        <p>Select families</p>
+        <input type="text" name="email">
+        <p>Select species</p>
+        <input type="text" name="email">
+        <?php
+            if(isset($_GET['error'])){
+                if($_GET['error']=="invalidname")
+                {
+                    echo '<span class="error >Invalid album name!</span>';
+                }
+                else if ($_GET['error']=="emptyfields")
+                {
+                    echo '<span class="error >You need to complete all fields!</span>';
+                }
+            }
+            ?>
+        </div>
+        <div class="popupbuttons">
+            <button type="button" id="verde"> Cancel</button>
+            <button type="button" name="createAlbum_submit" id="verde"> Create Album</button>
+        </div>
+     </form>
+</div>
 </html>

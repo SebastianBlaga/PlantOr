@@ -240,6 +240,8 @@ h2 {
 .my-albums {
     top: 485px;
     position: relative;
+    display: flex;
+    justify-content: space-around;
 
 }
 
