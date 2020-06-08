@@ -1,3 +1,8 @@
+<?php
+session_start();
+ require 'TN.php';
+require 'db.php';
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -37,98 +42,102 @@
      </div>
     <div class=Tabel>
     <div class=J3>
-    <div class=Item1>
-        <div class=C1>
-        <img src="Poze/img_mountains.jpg" alt="Poza" class=p1>
-        </div>
-        <div class=C>
-        <div class=Tname>Technical name</div>
-        <div class=Srn1>Some random name</div>
-        <div class=Tname>Common name</div>
-        <div class=Srn1>Some random name</div>
-        <div class=Tname>Plant group</div>
-        <div class=Srn1>The plant group</div>
-        <div class=Tname>Family</div>
-        <div class=Srn1>The plant family</div>
-        <div class=Tname>Species</div>
-        <div class=Srn1>The plant species</div>
-        <div class=EditButton>
-            <div class=EditTxt>Edit</div>
-            </div>
-        <div class=EditButton>
-            <div class=EditTxt>Remove</div>
-            </div>
-        </div>    
-    </div>
-     <div class=Item1>
-        <div class=C1>
-        <img src="Poze/img_mountains.jpg" alt="Poza" class=p1>
-        </div>
-        <div class=C>
-        <div class=Tname>Technical name</div>
-        <div class=Srn1>Some random name</div>
-        <div class=Tname>Common name</div>
-        <div class=Srn1>Some random name</div>
-        <div class=Tname>Plant group</div>
-        <div class=Srn1>The plant group</div>
-        <div class=Tname>Family</div>
-        <div class=Srn1>The plant family</div>
-        <div class=Tname>Species</div>
-        <div class=Srn1>The plant species</div>
-        <div class=EditButton>
-            <div class=EditTxt>Edit</div>
-            </div>
-        <div class=EditButton>
-            <div class=EditTxt>Remove</div>
-            </div>
-        </div>    
-    </div>
+<?php 
+        $sql = "SELECT * FROM plants";
+        $result = $conn->query($sql);
+$count=1;
+        if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()){
+            if($count % 2==1)
+            {
+            // output data of each row
+       echo'    <div class=Item1>';
+        echo'<div class=C1>';
+       echo' <img src="Poze/img_mountains.jpg" alt="Poza" class=p1>';
+       echo' </div>';
+       echo' <div class=C>';
+       echo' <div class=Tname>Technical name</div>';
+       echo' <div class=Srn1>';
+           echo TN($count,1);
+           echo '</div>';
+       echo' <div class=Tname>Common name</div>';
+       echo' <div class=Srn1>';
+           echo CN($count,1);
+           echo '</div>';
+       echo' <div class=Tname>Plant group</div>';
+       echo' <div class=Srn1>';
+           echo PG($count,1);
+           echo '</div>';
+       echo' <div class=Tname>Family</div>';
+        echo'<div class=Srn1>';
+           echo Family($count,1);
+           echo '</div>';
+        echo'<div class=Tname>Species</div>';
+       echo' <div class=Srn1>';
+           echo Species($count,1);
+           echo '</div>';
+       echo' <div class=EditButton>';
+       echo'     <div class=EditTxt>Edit</div>';
+       echo'     </div>';
+       echo' <div class=EditButton>';
+       echo'     <div class=EditTxt>Remove</div>';
+       echo'     </div>';
+      echo'  </div>    ';
+   echo' </div>';
+            }
+        $count=$count+1;
+        }
+        }
+?>
     </div>
     <div class=J4>
-    <div class=Item1>
-    <img src="Poze/img_mountains.jpg" alt="Poza" class=p1>
-        <div class=C>
-        <div class=Tname>Technical name</div>
-        <div class=Srn1>Some random name</div>
-        <div class=Tname>Common name</div>
-        <div class=Srn1>Some random name</div>
-        <div class=Tname>Plant group</div>
-        <div class=Srn1>The plant group</div>
-        <div class=Tname>Family</div>
-        <div class=Srn1>The plant family</div>
-        <div class=Tname>Species</div>
-        <div class=Srn1>The plant species</div>
-        <div class=EditButton>
-            <div class=EditTxt>Edit</div>
-            </div>
-        <div class=EditButton>
-            <div class=EditTxt>Remove</div>
-            </div>
-        </div>    
-    </div>
-     <div class=Item1>
-        <div class=C1>
-        <img src="Poze/img_mountains.jpg" alt="Poza" class=p1>
-        </div>
-        <div class=C>
-        <div class=Tname>Technical name</div>
-        <div class=Srn1>Some random name</div>
-        <div class=Tname>Common name</div>
-        <div class=Srn1>Some random name</div>
-        <div class=Tname>Plant group</div>
-        <div class=Srn1>The plant group</div>
-        <div class=Tname>Family</div>
-        <div class=Srn1>The plant family</div>
-        <div class=Tname>Species</div>
-        <div class=Srn1>The plant species</div>
-        <div class=EditButton>
-            <div class=EditTxt>Edit</div>
-            </div>
-        <div class=EditButton>
-            <div class=EditTxt>Remove</div>
-            </div>
-        </div>    
-    </div>
+<?php 
+        $sql = "SELECT * FROM plants";
+        $result = $conn->query($sql);
+$count=2;
+        if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()){
+            if($count % 2==0)
+            {
+            // output data of each row
+       echo'    <div class=Item1>';
+        echo'<div class=C1>';
+       echo' <img src="Poze/img_mountains.jpg" alt="Poza" class=p1>';
+       echo' </div>';
+       echo' <div class=C>';
+       echo' <div class=Tname>Technical name</div>';
+       echo' <div class=Srn1>';
+           echo TN($count,1);
+           echo '</div>';
+       echo' <div class=Tname>Common name</div>';
+       echo' <div class=Srn1>';
+           echo CN($count,1);
+           echo '</div>';
+       echo' <div class=Tname>Plant group</div>';
+       echo' <div class=Srn1>';
+           echo PG($count,1);
+           echo '</div>';
+       echo' <div class=Tname>Family</div>';
+        echo'<div class=Srn1>';
+           echo Family($count,1);
+           echo '</div>';
+        echo'<div class=Tname>Species</div>';
+       echo' <div class=Srn1>';
+           echo Species($count,1);
+           echo '</div>';
+       echo' <div class=EditButton>';
+       echo'     <div class=EditTxt>Edit</div>';
+       echo'     </div>';
+       echo' <div class=EditButton>';
+       echo'     <div class=EditTxt>Remove</div>';
+       echo'     </div>';
+      echo'  </div>    ';
+   echo' </div>';
+            }
+        $count=$count+1;
+        }
+        }
+?>        
     </div>       
     </div>
         </div>
