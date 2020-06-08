@@ -48,7 +48,7 @@ require 'db.php';
                            if(isset($_GET['error'])){
                                if($_GET['error']=="emptyfields")
                                {
-                                   echo '<span class="error" >*You missed some mandatory fields!</span>';
+                                   echo '<span class="error" >*You missed some mandatory fields da!</span>';
                                }
                            }
 ?>
