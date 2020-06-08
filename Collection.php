@@ -32,11 +32,9 @@ require 'db.php';
        <div class=PlantColText>Here you can see the plants you added to your personal virtual herbarium. Use the Add Plant button to add a new plant to your collection.</div>
     </div>
     <div class=J2>
-        <a href="#login">
-        <div class=button1 href="#CollPopup">
-        <div class=buttonText1>Add</div>
+        <div class=button1 >
+        <div class=buttonText1 onclick="document.location.href='CollectionPopup.php'" >Add</div>
         </div>
-        </a>
     </div>
     </div>
      </div>
@@ -76,11 +74,11 @@ $count=0;
        echo' <div class=Srn1>';
            echo Species($count,1);
            echo '</div>';
-       echo' <div class=EditButton>';
+       echo' <div class=EditButton onclick="document.location.href=\'editpopup.php\'">';
        echo'     <div class=EditTxt>Edit</div>';
        echo'     </div>';
-       echo' <div class=EditButton>';
-       echo'     <div class=EditTxt>Remove</div>';
+       echo' <div class=EditButton onclick="document.location.href=\'removePlantPopup.php\'">';
+       echo'     <div class=EditTxt >Remove</div>';
        echo'     </div>';
       echo'  </div>    ';
    echo' </div>';
@@ -125,10 +123,10 @@ $count=1;
        echo' <div class=Srn1>';
            echo Species($count,1);
            echo '</div>';
-       echo' <div class=EditButton>';
+           echo' <div class=EditButton onclick="document.location.href=\'editpopup.php\'">';
        echo'     <div class=EditTxt>Edit</div>';
        echo'     </div>';
-       echo' <div class=EditButton>';
+       echo' <div class=EditButton onclick="document.location.href=\'removePlantPopup.php\'">';
        echo'     <div class=EditTxt>Remove</div>';
        echo'     </div>';
       echo'  </div>    ';

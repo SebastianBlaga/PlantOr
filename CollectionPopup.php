@@ -12,7 +12,7 @@ require 'db.php';
         <title>PlantOr</title>
     </head>
     <div class="Popupbox">
-    <a class="Xbutton" href="Da">  <img src="Poze/x%20button.svg" alt="Poza"></a>
+    <a class="Xbutton" onClick="document.location.href='collection.php'">  <img src="Poze/x%20button.svg" alt="Poza"></a>
     <div class="AddPlant">Add Plant</div>
         
     <form action="add_plant.php" method="post">
@@ -53,7 +53,7 @@ require 'db.php';
                            }
 ?>
 <div class="buttons2">
-  <div class="Cancel1" href="Da">Cancel</div> 
+  <div class="Cancel1" onClick="document.location.href='collection.php'">Cancel</div> 
   <input type="submit" value="Add Plant" name="Submit1" class="Submit1"> 
 </div>
 </form> 

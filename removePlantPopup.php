@@ -32,11 +32,11 @@ session_start();
         <!-- Log in pop up form section-->
         <div class="bg-form"  >
             <div class="form" id="log-in-form" >
-            <span class="close-x" onClick="document.location.href='album.php'" >&times;</span>
+            <span class="close-x" onClick="document.location.href='collection.php'" >&times;</span>
                     <p class="no-title">Are you sure you want to remove this plant?</p><br>
                     <p>This process cannot be undone.</p>
                     <div class="form-buttons">
-                        <button type="button" class="buton-form" id="buton-cancel" >Cancel</button>
+                        <button type="button" class="buton-form" id="buton-cancel" onClick="document.location.href='collection.php'" >Cancel</button>
                         <button type="button" class="buton-form" id="buton-logout" >Remove</button>
                     </div>
                 </form>
