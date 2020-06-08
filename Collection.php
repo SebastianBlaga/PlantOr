@@ -1,3 +1,7 @@
+<?php
+session_start();
+ require 'TN.php';
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -43,15 +47,15 @@
         </div>
         <div class=C>
         <div class=Tname>Technical name</div>
-        <div class=Srn1>Some random name</div>
+        <div class=Srn1><?php  TN(7,1);?></div>
         <div class=Tname>Common name</div>
-        <div class=Srn1>Some random name</div>
+        <div class=Srn1><?php  CN(7,1);?></div>
         <div class=Tname>Plant group</div>
-        <div class=Srn1>The plant group</div>
+        <div class=Srn1><?php  PG(7,1);?></div>
         <div class=Tname>Family</div>
-        <div class=Srn1>The plant family</div>
+        <div class=Srn1><?php  Family(7,1);?></div>
         <div class=Tname>Species</div>
-        <div class=Srn1>The plant species</div>
+        <div class=Srn1><?php  Species(7,1);?></div>
         <div class=EditButton>
             <div class=EditTxt>Edit</div>
             </div>
@@ -66,15 +70,15 @@
         </div>
         <div class=C>
         <div class=Tname>Technical name</div>
-        <div class=Srn1>Some random name</div>
+        <div class=Srn1><?php  TN(7,1);?></div>
         <div class=Tname>Common name</div>
-        <div class=Srn1>Some random name</div>
+        <div class=Srn1><?php  CN(7,1);?></div>
         <div class=Tname>Plant group</div>
-        <div class=Srn1>The plant group</div>
+        <div class=Srn1><?php  PG(7,1);?></div>
         <div class=Tname>Family</div>
-        <div class=Srn1>The plant family</div>
+        <div class=Srn1><?php  Family(7,1);?></div>
         <div class=Tname>Species</div>
-        <div class=Srn1>The plant species</div>
+        <div class=Srn1><?php  Species(7,1);?></div>
         <div class=EditButton>
             <div class=EditTxt>Edit</div>
             </div>
@@ -89,15 +93,15 @@
     <img src="Poze/img_mountains.jpg" alt="Poza" class=p1>
         <div class=C>
         <div class=Tname>Technical name</div>
-        <div class=Srn1>Some random name</div>
+        <div class=Srn1><?php  TN(7,1);?></div>
         <div class=Tname>Common name</div>
-        <div class=Srn1>Some random name</div>
+        <div class=Srn1><?php  CN(7,1);?></div>
         <div class=Tname>Plant group</div>
-        <div class=Srn1>The plant group</div>
+        <div class=Srn1><?php  PG(7,1);?></div>
         <div class=Tname>Family</div>
-        <div class=Srn1>The plant family</div>
+        <div class=Srn1><?php  Family(7,1);?></div>
         <div class=Tname>Species</div>
-        <div class=Srn1>The plant species</div>
+        <div class=Srn1><?php  Species(7,1);?></div>
         <div class=EditButton>
             <div class=EditTxt>Edit</div>
             </div>
@@ -112,15 +116,15 @@
         </div>
         <div class=C>
         <div class=Tname>Technical name</div>
-        <div class=Srn1>Some random name</div>
+        <div class=Srn1><?php  TN(7,1);?></div>
         <div class=Tname>Common name</div>
-        <div class=Srn1>Some random name</div>
+        <div class=Srn1><?php  CN(7,1);?></div>
         <div class=Tname>Plant group</div>
-        <div class=Srn1>The plant group</div>
+        <div class=Srn1><?php  PG(7,1);?></div>
         <div class=Tname>Family</div>
-        <div class=Srn1>The plant family</div>
+        <div class=Srn1><?php  Family(7,1);?></div>
         <div class=Tname>Species</div>
-        <div class=Srn1>The plant species</div>
+        <div class=Srn1><?php  Species(7,1);?></div>
         <div class=EditButton>
             <div class=EditTxt>Edit</div>
             </div>
