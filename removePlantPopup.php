@@ -29,19 +29,21 @@ session_start();
             </div>
         </header>
         <div class="main-bg">
-        <!-- Log in pop up form section-->
+        <!-- Remove pop up form section-->
         <div class="bg-form"  >
+        <form action="removeplant.php" method="post">
             <div class="form" id="log-in-form" >
             <span class="close-x" onClick="document.location.href='collection.php'" >&times;</span>
                     <p class="no-title">Are you sure you want to remove this plant?</p><br>
                     <p>This process cannot be undone.</p>
                     <div class="form-buttons">
                         <button type="button" class="buton-form" id="buton-cancel" onClick="document.location.href='collection.php'" >Cancel</button>
-                        <button type="button" class="buton-form" id="buton-logout" >Remove</button>
+                        <?php echo '<button type="submit" class="buton-form" id="buton-logout" value='.$_GET["Value"].' name="Remove" >Remove</button>'?>
                     </div>
                 </form>
             </div>
         </div>
+        </form>
 </div>
 </body>
 </html>

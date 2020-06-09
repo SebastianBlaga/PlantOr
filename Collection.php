@@ -79,9 +79,9 @@ require 'db.php';
        echo' <div class=EditButton onclick="document.location.href=\'editpopup.php\'">';
        echo'     <div class=EditTxt>Edit</div>';
        echo'     </div>';
-       echo' <div class=EditButton onclick="document.location.href=\'removePlantPopup.php\'">';
-       echo'     <div class=EditTxt >Remove</div>';
-       echo'     </div>';
+       echo'<form action="removePlantPopup.php" method=\"GET\">';
+       echo'<button type=\"submit\" class=removeButton value='.$row[7].  ' name="Value"> Remove </button>';
+       echo'</form>';
       echo'  </div>    ';
    echo' </div>';
             }
@@ -130,9 +130,9 @@ require 'db.php';
            echo' <div class=EditButton onclick="document.location.href=\'editpopup.php\'">';
        echo'     <div class=EditTxt>Edit</div>';
        echo'     </div>';
-       echo' <div class=EditButton onclick="document.location.href=\'removePlantPopup.php\'">';
-       echo'     <div class=EditTxt>Remove</div>';
-       echo'     </div>';
+       echo'<form action="removePlantPopup.php" method=\"GET\">';
+       echo'<button type=\"submit\" class=removeButton value='.$row[7].  ' name="Value"> Remove </button>';
+       echo'</form>';
       echo'  </div>    ';
    echo' </div>';
             }
@@ -142,6 +142,6 @@ require 'db.php';
 ?>        
     </div>       
     </div>
-        </div>
+</div>
 </body>
 </html>
