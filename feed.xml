@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding = "utf-8"?>
+    <rss version="2.0">
+    <channel>
+    <title> Plants feed </title>
+    <link> http://localhost/PlantOr/homepage.php </link>
+    <description> PlantOr is a creative web application for a new generation of staging herberiums.
+    Fun and educational, it allows you to create and customize your herbarium by organizing your plant into albums while learning botany. </description>
+    <language>en-us </language>
+    <item>
+    <title> The most popular collected plants  </title>
+    <link>http://localhost/PlantOr/homepage.php </link>
+    <description> <![CDATA[ 
+    Technical Name :blabla<br>Common Name :dndjdj<br>Plant Group :flowering-plants<br>Family :equisetaceae<br>Species :banksia<br><br>-----------------------------------------------------------------------------<br>Technical Name :ghghg<br>Common Name :dddd<br>Plant Group :volvo<br>Family :volvo<br>Species :volvo<br><br>-----------------------------------------------------------------------------<br>Technical Name :o planta frumoasa<br>Common Name :coada calului<br>Plant Group :volvo<br>Family :volvo<br>Species :volvo<br><br>-----------------------------------------------------------------------------<br>]]> </description>
+    </item>
+    </channel>
+    </rss>
