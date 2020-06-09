@@ -11,34 +11,38 @@
     <a class="Xbutton"  onClick="document.location.href='Collection.php'">  <img src="Poze/x%20button.svg" alt="Poza"></a>
     <div class="AddPlant">Edit Plant</div>
         
-    <form action="add_plant.php" method="post">
-  <label for="TechnicalName" class="TechName">Technical Name*</label><br>
-  <input type="text" name="TN" id="fname" class="TechName1"><br>
-  <label for="CommonName" class="TechName">Common Name*</label><br>
-  <input type="text" id="fname" name="CN" class="TechName1"><br>
-  <label for="PlantGroup" class="TechName">Plant Group*</label><br>
-  <select class="TechName2" name="PG">
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
-        </select>
-  <label for="Family" class="TechName" >Family*</label><br>
-  <select class="TechName2" name="Family">
+    <form action="edit_plant.php" method="post">
+        <label for="TechnicalName" class="TechName">Technical Name*</label><br>
+        <input type="text" name="TN" id="fname" value="ghghg" class="TechName1"><br>
+
+        <label for="CommonName" class="TechName">Common Name*</label><br>
+        <input type="text" id="fname" name="CN" class="TechName1"><br>
+
+        <label for="PlantGroup" class="TechName">Plant Group*</label><br>
+        <select class="TechName2" name="PG">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+         </select>
+
+        <label for="Family" class="TechName" >Family*</label><br>
+        <select class="TechName2" name="Family">
              <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
+             <option value="saab">Saab</option>
+             <option value="mercedes">Mercedes</option>
+             <option value="audi">Audi</option>
         </select>
-  <label for="Species" class="TechName">Species*</label><br>
+        <label for="Species" class="TechName">Species*</label><br>
         <select class="TechName2" name="Species">
              <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
         </select><br>
-<label for="Picture" class="TechName">Picture*</label><br>
-<?php
+
+        <label for="Picture" class="TechName">Picture*</label><br>
+            <?php
                            if(isset($_GET['error'])){
                                if($_GET['error']=="emptyfields")
                                {
@@ -47,9 +51,10 @@
                            }
 ?>
  <div class="form-buttons">
- <button type="button" class="buton-form" id="buton-secundar-L"  >Romove image</button>
+ <button type="button" class="buton-form" id="buton-secundar-L"  >Remove image</button>
                         <button type="button" class="buton-form" id="buton-cancel" onClick="document.location.href='Collection.php'">Cancel</button>
-                        <button type="submit" class="buton-form" id="buton-login" name="login-submit" onClick="document.location.href='Collection.php'">Save</button>
+                        <?php echo '<button type="submit" class="buton-form" id="buton-login" value='.$_GET["Value"].' name="save-submit" >Save</button> '?>
+                        
                     </div>
 </form> 
     </div>
