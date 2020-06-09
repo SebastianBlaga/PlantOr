@@ -16,11 +16,6 @@ $imgTempName = $_FILES['img']['tmp_name'];
 
 
 
-
-
-
-
-
 if(empty($TN) || empty($CN) || empty($PG) || empty($Family) || empty($Species))
 {
     header("Location:CollectionPopup.php?error=emptyfields");

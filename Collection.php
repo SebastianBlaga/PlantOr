@@ -53,8 +53,8 @@ require 'db.php';
             // output data of each row
        echo'    <div class=Item1>';
         echo'<div class=C1>';
-        include_once 'db.php';
-        $sql = "SELECT * FROM plants;";
+        
+        
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)) {
             echo "SQL statement failed!";
@@ -62,7 +62,7 @@ require 'db.php';
             mysqli_stmt_execute($stmt);
             $result = mysqli_stmt_get_result($stmt);
 
-            while ($row = mysqli_fetch_assoc($result))  {
+            if($row = mysqli_fetch_assoc($result))  {
                 echo' <img src="img/plants/'.$row["imageName"].'" alt="Poza" class=p1>';
             }
         }
@@ -117,8 +117,8 @@ require 'db.php';
             // output data of each row
        echo'    <div class=Item1>';
         echo'<div class=C1>';
-        include_once 'db.php';
-        $sql = "SELECT * FROM plants;";
+        
+        
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)) {
             echo "SQL statement failed!";
@@ -126,11 +126,10 @@ require 'db.php';
             mysqli_stmt_execute($stmt);
             $result = mysqli_stmt_get_result($stmt);
 
-            while ($row = mysqli_fetch_assoc($result))  {
+            if($row = mysqli_fetch_assoc($result))  {
                 echo' <img src="img/plants/'.$row["imageName"].'" alt="Poza" class=p1>';
             }
         }
-            
        echo' </div>';
        echo' <div class=C>';
        echo' <div class=Tname>Technical name</div>';
