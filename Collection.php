@@ -1,5 +1,8 @@
 <?php
+if(!isset($_SESSION))
+{
 session_start();
+}
  require 'TN.php';
 require 'db.php';
 ?>
@@ -41,12 +44,13 @@ require 'db.php';
     <div class=Tabel>
     <div class=J3>
 <?php 
-        $sql = "SELECT * FROM plants";
+        $sql = "SELECT * FROM plants WHERE idUser=".$_SESSION['userId'];
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
         $count=$result->num_rows;
         if($count % 2==0)
             $count=$count+1;
+    
         while($row = $result->fetch_row()){
             if($count % 2==1)
             {
@@ -58,27 +62,27 @@ require 'db.php';
        echo' <div class=C>';
        echo' <div class=Tname>Technical name</div>';
        echo' <div class=Srn1>';
-           echo TN($row[7],1);
+           echo TN($row[7],$_SESSION['userId']);
            echo '</div>';
        echo' <div class=Tname>Common name</div>';
        echo' <div class=Srn1>';
-           echo CN($row[7],1);
+           echo CN($row[7],$_SESSION['userId']);
            echo '</div>';
        echo' <div class=Tname>Plant group</div>';
        echo' <div class=Srn1>';
-           echo PG($row[7],1);
+           echo PG($row[7],$_SESSION['userId']);
            echo '</div>';
        echo' <div class=Tname>Family</div>';
         echo'<div class=Srn1>';
-           echo Family($row[7],1);
+           echo Family($row[7],$_SESSION['userId']);
            echo '</div>';
         echo'<div class=Tname>Species</div>';
        echo' <div class=Srn1>';
-           echo Species($row[7],1);
+           echo Species($row[7],$_SESSION['userId']);
            echo '</div>';
-       echo' <div class=EditButton onclick="document.location.href=\'editpopup.php\'">';
-       echo'     <div class=EditTxt>Edit</div>';
-       echo'     </div>';
+           echo'<form action="editpopup.php" method=\"GET\">';
+           echo'<button type=\"submit\" class=removeButton value='.$row[7].  ' name="Value"> Edit </button>';
+           echo'</form>';
        echo'<form action="removePlantPopup.php" method=\"GET\">';
        echo'<button type=\"submit\" class=removeButton value='.$row[7].  ' name="Value"> Remove </button>';
        echo'</form>';
@@ -92,7 +96,7 @@ require 'db.php';
     </div>
     <div class=J4>
 <?php 
-        $sql = "SELECT * FROM plants";
+        $sql = "SELECT * FROM plants WHERE idUser=".$_SESSION['userId'];
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             $count=$result->num_rows;
@@ -109,27 +113,27 @@ require 'db.php';
        echo' <div class=C>';
        echo' <div class=Tname>Technical name</div>';
        echo' <div class=Srn1>';
-           echo TN($row[7],1);
+           echo TN($row[7],$_SESSION['userId']);
            echo '</div>';
        echo' <div class=Tname>Common name</div>';
        echo' <div class=Srn1>';
-           echo CN($row[7],1);
+           echo CN($row[7],$_SESSION['userId']);
            echo '</div>';
        echo' <div class=Tname>Plant group</div>';
        echo' <div class=Srn1>';
-           echo PG($row[7],1);
+           echo PG($row[7],$_SESSION['userId']);
            echo '</div>';
        echo' <div class=Tname>Family</div>';
         echo'<div class=Srn1>';
-           echo Family($row[7],1);
+           echo Family($row[7],$_SESSION['userId']);
            echo '</div>';
         echo'<div class=Tname>Species</div>';
        echo' <div class=Srn1>';
-           echo Species($row[7],1);
+           echo Species($row[7],$_SESSION['userId']);
            echo '</div>';
-           echo' <div class=EditButton onclick="document.location.href=\'editpopup.php\'">';
-       echo'     <div class=EditTxt>Edit</div>';
-       echo'     </div>';
+           echo'<form action="editpopup.php" method=\"GET\">';
+           echo'<button type=\"submit\" class=removeButton value='.$row[7].  ' name="Value"> Edit </button>';
+           echo'</form>';
        echo'<form action="removePlantPopup.php" method=\"GET\">';
        echo'<button type=\"submit\" class=removeButton value='.$row[7].  ' name="Value"> Remove </button>';
        echo'</form>';

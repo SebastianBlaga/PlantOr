@@ -9,6 +9,7 @@ $PG = $_POST['PG'];
 $Family = $_POST['Family'];
 $Species = $_POST['Species'];
 $img = $_POST['img'];
+$idU = $_SESSION['userId'];
 
 if(empty($TN) || empty($CN) || empty($PG) || empty($Family) || empty($Species))
 {
@@ -20,10 +21,15 @@ else
     $sql = "INSERT INTO plants 
     ( idUser,TechnicalName,CommonName,PlantGroup,Species,Family,Picture)
 VALUES 
-( 1,'$TN', '$CN','$PG','$Species','$Family','$img');";
+( '$idU','$TN', '$CN','$PG','$Species','$Family','$img');";
     
    if(mysqli_query($conn, $sql)){
-    header("Location:Collection.php");
+   // header("Location:Collection.php");
+   echo $idU;
+   if(isset($_SESSION['userId']))
+   {
+       echo 'wow';
+   }
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
 }
