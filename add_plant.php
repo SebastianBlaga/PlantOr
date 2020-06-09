@@ -15,7 +15,7 @@ $imgName = $_FILES['img']['name'];
 $imgTempName = $_FILES['img']['tmp_name'];
 
 
-$img = $_POST['img'];
+
 $idU = $_SESSION['userId'];
 
 if(empty($TN) || empty($CN) || empty($PG) || empty($Family) || empty($Species))
@@ -27,15 +27,11 @@ else
     {
     $sql = "INSERT INTO plants 
     (idUser,TechnicalName,CommonName,PlantGroup,Species,Family,imageName)
-    VALUES ( 1,'$TN', '$CN','$PG','$Species','$Family','$imgName');";
+    VALUES ( '$idU','$TN', '$CN','$PG','$Species','$Family','$imgName');";
     
     $fileDestination = 'img/plants/' . $imgName;
     move_uploaded_file($imgTempName, $fileDestination);
-    ( idUser,TechnicalName,CommonName,PlantGroup,Species,Family,Picture)
-VALUES 
-( '$idU','$TN', '$CN','$PG','$Species','$Family','$img');";
     
-
 
    if(mysqli_query($conn, $sql)){
    // header("Location:Collection.php");
