@@ -1,7 +1,9 @@
 <?php
+if(!isset($_SESSION))
+{
 session_start();
+}
 ?>
-
 <!DOCTYPE HTML>
 <html lang="en">
 
@@ -17,8 +19,8 @@ session_start();
         <header>
             <div class="menu-header">
                 <div class="menu">
-                    <a href="#statistics">Statistics</a>
-                    <a href="#collection">Collection</a>
+                    <a href="#statistics" onClick="document.location.href='Statistics.php'">Statistics</a>
+                    <a href="#collection" onClick="document.location.href='Collection.php'">Collection</a>
                     <a class="active" href="#albums">Albums</a>
                     <a href="#about" onClick="document.location.href='about.php'">About</a>
                     <a href="logoutConfirm.php">Log Out</a>
@@ -35,7 +37,7 @@ session_start();
                 </p>
             </div>
             <div class="createButton">
-                <button type="button" onClick="document.location.href='Create_album.php'"> Create Album</button>
+                <button type="button" onClick="document.location.href='Create_album_popup.php'"> Create Album</button>
             </div>
         </div>
         <div class="suggested">Suggested albums</div>
@@ -117,6 +119,7 @@ session_start();
         <div class="suggested-albums1">
             <div class="album-list">
             <?php
+                require 'create_album.php';
                 if ($_GET['error']=="noerror")
                 {
                     

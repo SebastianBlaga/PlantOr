@@ -1,7 +1,9 @@
 <?php
+if(!isset($_SESSION))
+{
 session_start();
+}
 ?>
-
 <!DOCTYPE HTML>
 <html lang="en">
 
@@ -31,7 +33,7 @@ session_start();
         <?php  
 
         include_once 'db.php';
-        $sql = "SELECT * FROM plants;";
+        $sql = "SELECT * FROM plants where idUser=".$_SESSION['userId'];
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)) {
             echo "SQL statement failed!";

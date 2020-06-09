@@ -262,8 +262,8 @@ h2 {
 
 
 .popupbox {
-    top: 125px;
-    left: 660px;
+    top: 15%;
+    left: 35%;
     position: fixed;
     width: 600px;
     height: 707px;
@@ -279,7 +279,7 @@ h2 {
     position: absolute;
     width: 340px;
     height: 57px;
-    text-align: left;
+    text-align: Center;
     font: bold 50px/57px Cooper;
     letter-spacing: 0px;
     color: #085D70;
