@@ -43,7 +43,7 @@ require 'Charts.php';
         <div class="suggested"> Most popular collected plants</div>
 <div class="AfisarePlante">
 <?php 
-        $sql = "SELECT * FROM plants";
+        $sql = "select *, count(TechnicalName) from plants group by TechnicalName order by count(TechnicalName) desc limit 3";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
         $count=$result->num_rows;
@@ -158,7 +158,23 @@ require 'Charts.php';
     <div id="piechart2" class="PGChart"></div>
     <div id="piechart3" class="PGChart"></div>
     </div>
-
+<div class="Exports">
+<?php   
+$sql="SELECT * FROM plants order by idPlant";    
+$result=mysqli_query($conn,$sql)    
+?> 
+<div>
+<form method="post" action="export.php" align="center">  
+                     <input type="submit" name="export" value="CSV Export Tabel Plante" class="Export1" />  
+</form> 
+<form method="post" action="export2.php" align="center">  
+                     <input type="submit" name="export" value="CSV Export Tabel Users" class="Export1" />  
+</form>
+<form method="post" action="export3.php" align="center">  
+                     <input type="submit" name="export" value="CSV Export Tabel Albums" class="Export1" />  
+</form>
+</div>  
+</div>
 </body>
 
 </html>
