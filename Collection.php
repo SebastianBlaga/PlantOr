@@ -59,45 +59,37 @@ require 'db.php';
         echo'<div class=C1>';
         
         
-        $stmt = mysqli_stmt_init($conn);
-        if(!mysqli_stmt_prepare($stmt, $sql)) {
-            echo "SQL statement failed!";
-        } else {
-            mysqli_stmt_execute($stmt);
-            $result = mysqli_stmt_get_result($stmt);
 
-            if($row = mysqli_fetch_assoc($result))  {
-                echo' <img src="img/plants/'.$row["imageName"].'" alt="Poza" class=p1>';
-            }
-        }
+        echo' <img src="img/plants/'.$row[7].'" alt="Poza" class=p1>';
+ 
        
        echo' </div>';
        echo' <div class=C>';
        echo' <div class=Tname>Technical name</div>';
        echo' <div class=Srn1>';
-           echo TN($row[7],$_SESSION['userId']);
+           echo TN($row[6],$_SESSION['userId']);
            echo '</div>';
        echo' <div class=Tname>Common name</div>';
        echo' <div class=Srn1>';
-           echo CN($row[7],$_SESSION['userId']);
+           echo CN($row[6],$_SESSION['userId']);
            echo '</div>';
        echo' <div class=Tname>Plant group</div>';
        echo' <div class=Srn1>';
-           echo PG($row[7],$_SESSION['userId']);
+           echo PG($row[6],$_SESSION['userId']);
            echo '</div>';
        echo' <div class=Tname>Family</div>';
         echo'<div class=Srn1>';
-           echo Family($row[7],$_SESSION['userId']);
+           echo Family($row[6],$_SESSION['userId']);
            echo '</div>';
         echo'<div class=Tname>Species</div>';
        echo' <div class=Srn1>';
-           echo Species($row[7],$_SESSION['userId']);
+           echo Species($row[6],$_SESSION['userId']);
            echo '</div>';
            echo'<form action="editpopup.php" method=\"GET\">';
-           echo'<button type=\"submit\" class=removeButton value='.$row[7].  ' name="Value"> Edit </button>';
+           echo'<button type=\"submit\" class=removeButton value='.$row[6].  ' name="Value"> Edit </button>';
            echo'</form>';
        echo'<form action="removePlantPopup.php" method=\"GET\">';
-       echo'<button type=\"submit\" class=removeButton value='.$row[7].  ' name="Value"> Remove </button>';
+       echo'<button type=\"submit\" class=removeButton value='.$row[6].  ' name="Value"> Remove </button>';
        echo'</form>';
       echo'  </div>    ';
    echo' </div>';
@@ -122,45 +114,37 @@ require 'db.php';
        echo'    <div class=Item1>';
         echo'<div class=C1>';
         
-        
-        $stmt = mysqli_stmt_init($conn);
-        if(!mysqli_stmt_prepare($stmt, $sql)) {
-            echo "SQL statement failed!";
-        } else {
-            mysqli_stmt_execute($stmt);
-            $result = mysqli_stmt_get_result($stmt);
-
-            if($row = mysqli_fetch_assoc($result))  {
-                echo' <img src="img/plants/'.$row["imageName"].'" alt="Poza" class=p1>';
-            }
-        }
+  
+        echo' <img src="img/plants/'.$row[7].'" alt="Poza" class=p1>';
+         
+  
        echo' </div>';
        echo' <div class=C>';
        echo' <div class=Tname>Technical name</div>';
        echo' <div class=Srn1>';
-           echo TN($row[7],$_SESSION['userId']);
+           echo TN($row[6],$_SESSION['userId']);
            echo '</div>';
        echo' <div class=Tname>Common name</div>';
        echo' <div class=Srn1>';
-           echo CN($row[7],$_SESSION['userId']);
+           echo CN($row[6],$_SESSION['userId']);
            echo '</div>';
        echo' <div class=Tname>Plant group</div>';
        echo' <div class=Srn1>';
-           echo PG($row[7],$_SESSION['userId']);
+           echo PG($row[6],$_SESSION['userId']);
            echo '</div>';
        echo' <div class=Tname>Family</div>';
         echo'<div class=Srn1>';
-           echo Family($row[7],$_SESSION['userId']);
+           echo Family($row[6],$_SESSION['userId']);
            echo '</div>';
         echo'<div class=Tname>Species</div>';
        echo' <div class=Srn1>';
-           echo Species($row[7],$_SESSION['userId']);
+           echo Species($row[6],$_SESSION['userId']);
            echo '</div>';
            echo'<form action="editpopup.php" method=\"GET\">';
-           echo'<button type=\"submit\" class=removeButton value='.$row[7].  ' name="Value"> Edit </button>';
+           echo'<button type=\"submit\" class=removeButton value='.$row[6].  ' name="Value"> Edit </button>';
            echo'</form>';
        echo'<form action="removePlantPopup.php" method=\"GET\">';
-       echo'<button type=\"submit\" class=removeButton value='.$row[7].  ' name="Value"> Remove </button>';
+       echo'<button type=\"submit\" class=removeButton value='.$row[6].  ' name="Value"> Remove </button>';
        echo'</form>';
       echo'  </div>    ';
    echo' </div>';
