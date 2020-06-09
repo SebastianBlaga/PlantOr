@@ -10,53 +10,62 @@
     <div class="Popupbox">
     <a class="Xbutton"  onClick="document.location.href='Collection.php'">  <img src="Poze/x%20button.svg" alt="Poza"></a>
     <div class="AddPlant">Edit Plant</div>
-        
-    <form action="edit_plant.php" method="post">
-        <label for="TechnicalName" class="TechName">Technical Name*</label><br>
-        <input type="text" name="TN" id="fname" value="ghghg" class="TechName1"><br>
+     <?php
+     require 'db.php';
+     $sql = "SELECT * FROM plants WHERE idPlant=".$_GET["Value"];
+     $result = $conn->query($sql);
+     $row = $result->fetch_row();
+    echo '<form action="edit_plant.php" method="post">';
+        echo '<label for="TechnicalName" class="TechName">Technical Name*</label><br>';
+        echo '<input type="text" name="TN" id="fname" value="'.$row[1].'" class="TechName1"><br>';
 
-        <label for="CommonName" class="TechName">Common Name*</label><br>
-        <input type="text" id="fname" name="CN" class="TechName1"><br>
+        echo '<label for="CommonName" class="TechName">Common Name*</label><br>';
+        echo '<input type="text" id="fname" name="CN" value="'.$row[2].'" class="TechName1"><br>';
 
-        <label for="PlantGroup" class="TechName">Plant Group*</label><br>
-        <select class="TechName2" name="PG">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
-         </select>
+        echo '<label for="PlantGroup" class="TechName">Plant Group*</label><br>';
+        echo '<select class="TechName2" name="PG">';
+        echo '<option value="flowering-plants">flowering-plants</option>';
+        echo '<option value="conifers-cycads">conifers-cycads</option>';
+        echo '<option value="liverworts-mosses">liverworts-mosses</option>';
+        echo '<option value="ferns">ferns</option>';
+        echo '<option value="'.$row[3].'" selected="selected">'.$row[3].'</option>';
+        echo '</select>';
 
-        <label for="Family" class="TechName" >Family*</label><br>
-        <select class="TechName2" name="Family">
-             <option value="volvo">Volvo</option>
-             <option value="saab">Saab</option>
-             <option value="mercedes">Mercedes</option>
-             <option value="audi">Audi</option>
-        </select>
-        <label for="Species" class="TechName">Species*</label><br>
-        <select class="TechName2" name="Species">
-             <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
-        </select><br>
+        echo '<label for="Family" class="TechName" >Family*</label><br>';
+        echo '<select class="TechName2" name="Family">';
+        echo '<option value="equisetaceae">equisetaceae</option>';
+        echo '<option value="ericaceae">ericaceae</option>';
+        echo '<option value="asteraceae">asteraceae</option>';
+        echo ' <option value="rosaceae">rosaceae</option>';
+        echo ' <option value="proteaceae">proteaceae</option>';
+        echo '<option value="'.$row[4].'" selected="selected">'.$row[4].'</option>';
+        echo '</select>';
 
-        <label for="Picture" class="TechName">Picture*</label><br>
-            <?php
+        echo '<label for="Species" class="TechName">Species*</label><br>';
+        echo '<select class="TechName2" name="Species">';
+        echo '<option value="banksia">banksia</option>';
+        echo '<option value="salvia">salvia</option>';
+        echo ' <option value="equisetum">quisetum</option>';
+        echo ' <option value="pavonia">pavonia</option>';
+        echo ' <option value="erica">erica</option>';
+        echo '<option value="'.$row[5].'" selected="selected">'.$row[5].'</option>';
+        echo '</select><br>';
+
+        echo '<label for="Picture" class="TechName">Picture*</label><br>';
                            if(isset($_GET['error'])){
                                if($_GET['error']=="emptyfields")
                                {
                                    echo '<span class="error" >*You missed some mandatory fields!</span>';
                                }
                            }
-?>
- <div class="form-buttons">
- <button type="button" class="buton-form" id="buton-secundar-L"  >Remove image</button>
-                        <button type="button" class="buton-form" id="buton-cancel" onClick="document.location.href='Collection.php'">Cancel</button>
-                        <?php echo '<button type="submit" class="buton-form" id="buton-login" value='.$_GET["Value"].' name="save-submit" >Save</button> '?>
+                           echo '<div class="form-buttons">';
+                           echo '<button type="button" class="buton-form" id="buton-secundar-L"  >Remove image</button>';
+                           echo '<button type="button" class="buton-form" id="buton-cancel" onClick="document.location.href=\'Collection.php\'">Cancel</button>';
+                         echo '<button type="submit" class="buton-form" id="buton-login" value='.$_GET["Value"].' name="save-submit" >Save</button> ';
                         
-                    </div>
-</form> 
+                         echo '</div>';
+                         echo '</form> ';
+?>
     </div>
     <body class="Background">
     <div class="Background1">

@@ -34,12 +34,7 @@ else
     
 
    if(mysqli_query($conn, $sql)){
-   // header("Location:Collection.php");
-   echo $idU;
-   if(isset($_SESSION['userId']))
-   {
-       echo 'wow';
-   }
+   header("Location:Collection.php");
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
 }

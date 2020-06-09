@@ -20,27 +20,33 @@ require 'db.php';
   <input type="text" name="TN" id="fname" class="TechName1"><br><br>
   <label for="CommonName" class="TechName">Common Name*</label><br>
   <input type="text" id="fname" name="CN" class="TechName1"><br><br>
+
   <label for="PlantGroup" class="TechName">Plant Group*</label><br>
   <select class="TechName2" name="PG">
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
-        </select>
+ <option value="flowering-plants">flowering-plants</option>
+ <option value="conifers-cycads">conifers-cycads</option>
+ <option value="liverworts-mosses">liverworts-mosses</option>
+  <option value="ferns">ferns</option>
+  </select>';
+
   <label for="Family" class="TechName" >Family*</label><br>
   <select class="TechName2" name="Family">
-             <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
+  <option value="equisetaceae">equisetaceae</option>
+    <option value="ericaceae">ericaceae</option>
+    <option value="asteraceae">asteraceae</option>
+    <option value="rosaceae">rosaceae</option>
+    <option value="proteaceae">proteaceae</option>
         </select>
+
   <label for="Species" class="TechName">Species*</label><br>
         <select class="TechName2" name="Species">
-             <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
+        <option value="banksia">banksia</option>
+        <option value="salvia">salvia</option>
+        <option value="equisetum">quisetum</option>
+        <option value="pavonia">pavonia</option>
+        <option value="erica">erica</option>
         </select><br>
+
 <label for="Picture" class="TechName">Picture*</label><br>
 <label for="Picture" class="TechName4">Choose file</label>
 <input type="file" id="img" name="img" accept="image/*" class="TechName3">
