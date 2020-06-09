@@ -15,7 +15,7 @@ require 'db.php';
     <a class="Xbutton" onClick="document.location.href='collection.php'">  <img src="Poze/x%20button.svg" alt="Poza"></a>
     <div class="AddPlant">Add Plant</div>
         
-    <form action="add_plant.php" method="post">
+    <form action="add_plant.php" method="POST" enctype="multipart/form-data">
   <label for="TechnicalName" class="TechName">Techncal Name*</label><br>
   <input type="text" name="TN" id="fname" class="TechName1"><br><br>
   <label for="CommonName" class="TechName">Common Name*</label><br>

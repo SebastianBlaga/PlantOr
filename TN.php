@@ -96,4 +96,19 @@ if ($result=mysqli_query($conn,$sql))
   mysqli_free_result($result);
 }
 }
+/*
+function Image($ifPlant, $idUser){
+  require 'db.php';
+  if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+  $sql = "SELECT imageName FROM plants WHERE idPlant=$idPlant and idUser=$idUser";
+  $stmt = mysqli_stmt_init($conn);
+  mysqli_stmt_execute($stmt);
+  $result = mysqli_stmt_get_result($stmt);
+  if($row = mysqli_fetch_assoc($result)){
+    printf ("%s\n", $row["imageName"]);
+  }
+}*/
 ?>
