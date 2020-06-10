@@ -6,8 +6,8 @@ require 'db.php';
       header('Content-Type: text/csv; charset=utf-8');  
       header('Content-Disposition: attachment; filename=data.csv');  
       $output = fopen("php://output", "w");  
-      fputcsv($output, array('idUsers',	'idAlbum',	'NumeAlbum',	'idp1',	'idp2',	'idp3',	'idp4',	'idp5',	'idp6',	'idp7	','idp8',	'idp9',	'idp10'));  
-      $query = "SELECT * from albums ORDER BY idUsers DESC";  
+      fputcsv($output, array('idUser',	'nume', 'id','plantGroup','plantFamily','plantSpecies'));  
+      $query = "SELECT * from albums ORDER BY idUser DESC";  
       $result = mysqli_query($conn, $query);  
       while($row = mysqli_fetch_assoc($result))  
       {  

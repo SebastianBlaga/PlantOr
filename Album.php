@@ -20,11 +20,11 @@ session_start();
         <header>
             <div class="menu-header">
                 <div class="menu">
-                    <a href="#statistics" onClick="document.location.href='Statistics.php'">Statistics</a>
+                    <a href="#statistics" onClick="document.location.href='Statistics2.php'">Statistics</a>
                     <a href="#collection" onClick="document.location.href='Collection.php'">Collection</a>
                     <a class="active" href="#albums">Albums</a>
                     <a href="#about" onClick="document.location.href='about.php'">About</a>
-                    <a href="logoutConfirm.php">Log Out</a>
+                    <a href="logoutConfirm.php" onClick="document.location.href='logoutConfirm.php'">Log Out</a>
                 </div>
                 <div class="Logo"> <img src='img/Logo white.png'></div>
         </header>

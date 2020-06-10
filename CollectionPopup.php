@@ -69,11 +69,11 @@ require 'db.php';
          <header>
             <div class="menu-header">
                 <div class="menu">
-                    <a href="logoutConfirm.php">Log Out</a>
+                    <a href="logoutConfirm.php" onClick="document.location.href='logoutConfirm.php'">Log Out</a>
                     <a href="#about" onClick="document.location.href='about.php'">About</a>
-                    <a class="active" href="#albums">Albums</a>
-                    <a href="#collection">Collection</a>
-                    <a href="#statistics">Statistics</a>
+                    <a href="#albums" onClick="document.location.href='album.php'">Albums</a>
+                    <a class="active" href="#collection">Collection</a>
+                    <a href="#statistics" onClick="document.location.href='statistics2.php'">Statistics</a>
                 </div>
                 <div class="Logo"> <img src='Poze/Logo%20white.svg'></div>
              </div>
@@ -92,52 +92,60 @@ require 'db.php';
         </div>
         </a>
     </div>
-    </div>
-     </div>
+
+
+
+
     <div class=Tabel>
     <div class=J3>
 <?php 
-        $sql = "SELECT * FROM plants";
+        $sql = "SELECT * FROM plants WHERE idUser=".$_SESSION['userId'];
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
         $count=$result->num_rows;
         if($count % 2==0)
             $count=$count+1;
+    
         while($row = $result->fetch_row()){
             if($count % 2==1)
             {
             // output data of each row
        echo'    <div class=Item1>';
         echo'<div class=C1>';
-       echo' <img src="Poze/img_mountains.jpg" alt="Poza" class=p1>';
+        
+        
+
+        echo' <img src="img/plants/'.$row[7].'" alt="Poza" class=p1>';
+ 
+       
        echo' </div>';
        echo' <div class=C>';
        echo' <div class=Tname>Technical name</div>';
        echo' <div class=Srn1>';
-           echo TN($row[7],1);
+           echo TN($row[6],$_SESSION['userId']);
            echo '</div>';
        echo' <div class=Tname>Common name</div>';
        echo' <div class=Srn1>';
-           echo CN($row[7],1);
+           echo CN($row[6],$_SESSION['userId']);
            echo '</div>';
        echo' <div class=Tname>Plant group</div>';
        echo' <div class=Srn1>';
-           echo PG($row[7],1);
+           echo PG($row[6],$_SESSION['userId']);
            echo '</div>';
        echo' <div class=Tname>Family</div>';
         echo'<div class=Srn1>';
-           echo Family($row[7],1);
+           echo Family($row[6],$_SESSION['userId']);
            echo '</div>';
         echo'<div class=Tname>Species</div>';
        echo' <div class=Srn1>';
-           echo Species($row[7],1);
+           echo Species($row[6],$_SESSION['userId']);
            echo '</div>';
-       echo' <div class=EditButton>';
-       echo'     <div class=EditTxt>Edit</div>';
-       echo'     </div>';
-       echo' <div class=EditButton>';
-       echo'     <div class=EditTxt>Remove</div>';
-       echo'     </div>';
+           echo'<form action="editpopup.php" method=\"GET\">';
+           echo'<button type=\"submit\" class=removeButton value='.$row[6].  ' name="Value"> Edit </button>';
+           echo'</form>';
+       echo'<form action="removePlantPopup.php" method=\"GET\">';
+       echo'<button type=\"submit\" class=removeButton value='.$row[6].  ' name="Value"> Remove </button>';
+       echo'</form>';
       echo'  </div>    ';
    echo' </div>';
             }
@@ -146,13 +154,13 @@ require 'db.php';
         }
 ?>
     </div>
-    <div class=J4>
+<div class=J4>
 <?php 
-        $sql = "SELECT * FROM plants";
+        $sql = "SELECT * FROM plants WHERE idUser=".$_SESSION['userId'];
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             $count=$result->num_rows;
-        if($count % 2==0)
+            if($count % 2==0)
             $count=$count+1;
         while($row = $result->fetch_row()){
             if($count % 2==0)
@@ -160,35 +168,39 @@ require 'db.php';
             // output data of each row
        echo'    <div class=Item1>';
         echo'<div class=C1>';
-       echo' <img src="Poze/img_mountains.jpg" alt="Poza" class=p1>';
+        
+  
+        echo' <img src="img/plants/'.$row[7].'" alt="Poza" class=p1>';
+         
+  
        echo' </div>';
        echo' <div class=C>';
        echo' <div class=Tname>Technical name</div>';
        echo' <div class=Srn1>';
-           echo TN($row[7],1);
+           echo TN($row[6],$_SESSION['userId']);
            echo '</div>';
        echo' <div class=Tname>Common name</div>';
        echo' <div class=Srn1>';
-           echo CN($row[7],1);
+           echo CN($row[6],$_SESSION['userId']);
            echo '</div>';
        echo' <div class=Tname>Plant group</div>';
        echo' <div class=Srn1>';
-           echo PG($row[7],1);
+           echo PG($row[6],$_SESSION['userId']);
            echo '</div>';
        echo' <div class=Tname>Family</div>';
         echo'<div class=Srn1>';
-           echo Family($row[7],1);
+           echo Family($row[6],$_SESSION['userId']);
            echo '</div>';
         echo'<div class=Tname>Species</div>';
        echo' <div class=Srn1>';
-           echo Species($row[7],1);
+           echo Species($row[6],$_SESSION['userId']);
            echo '</div>';
-       echo' <div class=EditButton>';
-       echo'     <div class=EditTxt>Edit</div>';
-       echo'     </div>';
-       echo' <div class=EditButton>';
-       echo'     <div class=EditTxt>Remove</div>';
-       echo'     </div>';
+           echo'<form action="editpopup.php" method=\"GET\">';
+           echo'<button type=\"submit\" class=removeButton value='.$row[6].  ' name="Value"> Edit </button>';
+           echo'</form>';
+       echo'<form action="removePlantPopup.php" method=\"GET\">';
+       echo'<button type=\"submit\" class=removeButton value='.$row[6].  ' name="Value"> Remove </button>';
+       echo'</form>';
       echo'  </div>    ';
    echo' </div>';
             }
@@ -196,6 +208,9 @@ require 'db.php';
         }
         }
 ?>        
+ </div>       
+</div>
+</div>
     </div>      
     </div>
         </div>

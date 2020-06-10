@@ -18,11 +18,11 @@ require 'db.php';
          <header>
             <div class="menu-header">
                 <div class="menu">  
-                    <a href="#statistics">Statistics</a>
-                    <a class="active"  href="#collection">Collection</a>
-                    <a href="#albums">Albums</a>
+                    <a href="#statistics" onClick="document.location.href='statistics2.php'">Statistics</a>
+                    <a class="active"  href="#collection" >Collection</a>
+                    <a href="#albums" onClick="document.location.href='album.php'">Albums</a>
                     <a href="#about" onClick="document.location.href='about.php'">About</a>
-                    <a href="logoutConfirm.php">Log Out</a>
+                    <a href="logoutConfirm.php" onClick="document.location.href='logoutConfirm.php'">Log Out</a>
                 </div>
                 <div class="Logo"> <img src='Poze/Logo%20white.svg'></div>
              </div>
@@ -99,7 +99,7 @@ require 'db.php';
         }
 ?>
     </div>
-    <div class=J4>
+<div class=J4>
 <?php 
         $sql = "SELECT * FROM plants WHERE idUser=".$_SESSION['userId'];
         $result = $conn->query($sql);
@@ -153,8 +153,8 @@ require 'db.php';
         }
         }
 ?>        
-    </div>       
-    </div>
+ </div>       
+</div>
 </div>
 </body>
 </html>

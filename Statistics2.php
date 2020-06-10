@@ -20,11 +20,11 @@ require 'Charts.php';
         <header>
             <div class="menu-header">
                 <div class="menu">
-                    <a class="active" href="#statistics">Statistics</a>
-                    <a href="#collection">Collection</a>
-                    <a href="#albums">Albums</a>
-                    <a href="#about">About</a>
-                    <a href="#logout">Log Out</a>
+                    <a class="active" href="#statistics" onClick="document.location.href='statistics2.php'">Statistics</a>
+                    <a href="#collection" onClick="document.location.href='collection.php'">Collection</a>
+                    <a href="#albums" onClick="document.location.href='album.php'">Albums</a>
+                    <a href="#about" onClick="document.location.href='about.php'">About</a>
+                    <a href="#logout" onClick="document.location.href='logoutConfirm.php'">Log Out</a>
                 </div>
                 <div class="Logo"> <img src='Poze/Logo%20white.svg'></div>
             </div>
@@ -43,18 +43,25 @@ require 'Charts.php';
         <div class="suggested"> Most popular collected plants</div>
 <div class="AfisarePlante">
 <?php 
-        $sql = "select *, count(TechnicalName) from plants group by TechnicalName order by count(TechnicalName) desc limit 3";
+        $sql = "select * from plants group by TechnicalName order by count(TechnicalName) desc limit 4";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
         $count=$result->num_rows;
-            $count=0;
+        if($count % 2==0)
+            $count=$count+1;
+    
         while($row = $result->fetch_row()){
-            if($count<3)
+            if($count % 2==1)
             {
             // output data of each row
        echo'    <div class=Item1>';
         echo'<div class=C1>';
-        echo' <img src="img/plants/'.$row[7].'" alt="Poza" class=p1>';
+        
+        
+
+        echo' <img src="img/plants/'; echo $row[7]; echo'" alt="Poza" class=p1>';
+ 
+       
        echo' </div>';
        echo' <div class=C>';
        echo' <div class=Tname>Technical name</div>';
@@ -77,16 +84,16 @@ require 'Charts.php';
        echo' <div class=Srn1>';
            echo Species($row[6],$_SESSION['userId']);
            echo '</div>';
-       echo' <div class=EditButton>';
-       echo'     <div class=EditTxt>Edit</div>';
-       echo'     </div>';
-       echo' <div class=EditButton>';
-       echo'     <div class=EditTxt>Remove</div>';
-       echo'     </div>';
+           echo'<form action="editpopup.php" method=\"GET\">';
+           echo'<button type=\"submit\" class=removeButton value='.$row[6].  ' name="Value"> Edit </button>';
+           echo'</form>';
+       echo'<form action="removePlantPopup.php" method=\"GET\">';
+       echo'<button type=\"submit\" class=removeButton value='.$row[6].  ' name="Value"> Remove </button>';
+       echo'</form>';
       echo'  </div>    ';
    echo' </div>';
             }
-        $count=$count+1;
+        $count=$count-1;
         }
         }
 ?>

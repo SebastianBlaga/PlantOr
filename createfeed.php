@@ -7,7 +7,7 @@ function createFeed(){
       {
       echo "Failed to connect to MySQL: " . mysqli_connect_error();
       }
-    $file='C:\xampp\htdocs\PlantOr\feed.xml';
+    $file='D:\xampp\htdocs\PlantOr\feed.xml';
     unlink($file);
     $feed="<?xml version=\"1.0\" encoding = \"utf-8\"?>
     <rss version=\"2.0\">
