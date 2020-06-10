@@ -17,12 +17,12 @@ require 'db.php';
     <body class="Background">
          <header>
             <div class="menu-header">
-                <div class="menu">
-                    <a href="logoutConfirm.php">Log Out</a>
-                    <a href="#about" onClick="document.location.href='about.php'">About</a>
-                    <a class="active" href="#albums">Albums</a>
-                    <a href="#collection">Collection</a>
+                <div class="menu">  
                     <a href="#statistics">Statistics</a>
+                    <a class="active"  href="#collection">Collection</a>
+                    <a href="#albums">Albums</a>
+                    <a href="#about" onClick="document.location.href='about.php'">About</a>
+                    <a href="logoutConfirm.php">Log Out</a>
                 </div>
                 <div class="Logo"> <img src='Poze/Logo%20white.svg'></div>
              </div>
