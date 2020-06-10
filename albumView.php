@@ -13,7 +13,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style_albumview.css" />
     <link rel="stylesheet" href="Album.css" />
-    <link rel="stylesheet" href="style_albumview" />
+    <link rel="stylesheet" href="style_menu(Seb).css" />
 </head>
 
 <body>
@@ -21,7 +21,7 @@ session_start();
             <div class="menu-header">
                 <div class="menu">
                     <a href="#statistics"  onClick="document.location.href='statistics.php'">Statistics</a>
-                    <a href="#collection"  onClick="document.location.href='Colletion.php'">Collection</a>
+                    <a href="#collection"  onClick="document.location.href='Collection.php'">Collection</a>
                     <a class="active" href="#albums"  onClick="document.location.href='Album.php'">Albums</a>
                     <a href="#about" onClick="document.location.href='about.php'">About</a>
                     <a href="logoutConfirm.php" onClick="document.location.href='logout.php'">Log Out</a>

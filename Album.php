@@ -13,6 +13,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="Album.css" />
     <link rel="stylesheet" href="style_albumview" />
+    <link rel="stylesheet" href="style_menu(Seb).css" />
 </head>
 
 <body>
@@ -44,7 +45,7 @@ session_start();
         <div class="suggested">Suggested albums</div>
 
 
-        <div class="my-albums">
+        <div class="suggested-albums1">
             
            <?php
                 require 'db.php';
@@ -56,9 +57,6 @@ session_start();
                         echo '<div class="album-test">';
                         echo' <div class="picture">';
                         echo' <img class="art" src="img/frunze.png"/>';
-                        echo' <img class="art" src="img/frunze.png"/>';
-                        echo' <img class="art" src="img/frunze.png"/>';
-                        echo' <img class="art" src="img/frunze.png"/>';
                         echo'</div>';
                         echo'<h1>';
                         echo "Medical";  
@@ -84,9 +82,6 @@ session_start();
                         echo '<div class="album-test">';
                         echo' <div class="picture">';
                         echo' <img class="art" src="img/frunze.png"/>';
-                        echo' <img class="art" src="img/frunze.png"/>';
-                        echo' <img class="art" src="img/frunze.png"/>';
-                        echo' <img class="art" src="img/frunze.png"/>';
                         echo'</div>';
                         echo'<h1>';
                         echo "Medical";  
@@ -111,9 +106,6 @@ session_start();
                     $r1 = $result1->num_rows;
                         echo '<div class="album-test">';
                         echo' <div class="picture">';
-                        echo' <img class="art" src="img/frunze.png"/>';
-                        echo' <img class="art" src="img/frunze.png"/>';
-                        echo' <img class="art" src="img/frunze.png"/>';
                         echo' <img class="art" src="img/frunze.png"/>';
                         echo'</div>';
                         echo'<h1>';
@@ -140,7 +132,7 @@ session_start();
 
 
         <br><br>
-        <div class="suggested-albums1">
+        <div class="my-albums">
            
             <?php
                 require 'db.php';
@@ -156,9 +148,6 @@ session_start();
                     $r1 = $result1->num_rows;
                         echo '<div class="album-test">';
                         echo' <div class="picture">';
-                        echo' <img class="art" src="img/frunze.png"/>';
-                        echo' <img class="art" src="img/frunze.png"/>';
-                        echo' <img class="art" src="img/frunze.png"/>';
                         echo' <img class="art" src="img/frunze.png"/>';
                         echo'</div>';
                         echo'<h1>';

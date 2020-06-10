@@ -4,6 +4,7 @@ body {
 
 img {
     max-width: 100%;
+    height:100%
 }
 .menu-header {
     background-color: #085D70;
@@ -47,8 +48,8 @@ div.Logo {
 
 
 .description {
-top: 150px;
-left: 100px;
+top: 15%;
+left: 5%;
 position: absolute;
 width: 90%;
 height: 230px;
@@ -81,13 +82,13 @@ p   {
 }
 
 .createButton {
-    left: 80%;
+    left: 75%;
     top: 35%;
     width: 10%;
-    position: inherit;
+    position: absolute;
 }
 
-button{
+button, #verde{
     width:220px;
     height: 50px;
     background-color:#ea3f28;
@@ -103,21 +104,7 @@ button{
     margin-bottom: 20px;
 }
 
-#verde{
-    width:220px;
-    height: 50px;
-    background-color:#085D70;
-    border:none;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    color:white;
-    font-weight: 600;
-    border-radius: 50px;
-    margin-right: 40px;
-    margin-bottom: 20px;
-}
+
 .title {
 top: 28px;
 left: 50px;
@@ -171,10 +158,9 @@ div.suggested {
 top: 500px;
 left: 100px;
 position: absolute;
-width: 272px;
 height: 35px;
 text-align: left;
-font: bold 30px/35px Cooper;
+font: bold 50px/35px Cooper;
 letter-spacing: 0px;
 color: #EA3F28;
 opacity: 1;
@@ -215,9 +201,9 @@ h2 {
 
 }
 
-.suggested-albums1{
+.suggested-albums1, .my-albums{
 
-    top: 600px;
+    top: 485px;
     position: relative;
     display: grid;
     grid-template-columns: 90%;
@@ -227,11 +213,15 @@ h2 {
 
 }
 
+.my-albums {
+    top: 600px
+
+}
 
 .album-test {
 
     
-    height: 700px;
+    height: 600px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 15px;
@@ -239,9 +229,7 @@ h2 {
 }
 
 .picture {
-    
-    display: grid;
-    grid-template-columns: 50% 50%;
+    height: 75%;
 }
 
 .picture .art {
@@ -249,66 +237,28 @@ h2 {
 
 }
 
-.my-albums {
-    top: 485px;
-    position: relative;
-    display: flex;
-    justify-content: space-around;
 
-}
 
 
 
 .yours {
-    top: 1327px;
+    top: 1260px;
     left: 100px;
     position: absolute;
-    width: 196px;
     height: 35px;
     text-align: left;
-    font: 30px/35px Cooper;
+    font: 50px/35px Cooper;
     letter-spacing: 0px;
     color: #085D70;
     opacity: 1;
 }
 
 
-.popupbox {
-    top: 15%;
-    left: 35%;
-    position: fixed;
-    width: 600px;
-    height: 707px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px #00000029;
-    border-radius: 15px;
-    opacity: 1;
-}
 
-.create {
-    top: 50px;
-    left: 130px;
-    position: absolute;
-    width: 340px;
-    height: 57px;
-    text-align: Center;
-    font: bold 50px/57px Cooper;
-    letter-spacing: 0px;
-    color: #085D70;
-    opacity: 1;
-}
 
-.Box {
-    top: 100px;
-    left: 75px;
-    position: relative;
-    width: 455px;
-    height: 420px;
-    display: flex;
-    flex-direction: column;
-    justify-content:space-evenly;
-    
-}
+
+
+
 
 .inputBar {
     width: 455px;
@@ -332,7 +282,7 @@ h2 {
 }
 
 input[type=submit]{
-    background-color: transparent;
+    background-color:transparent;
     border: none;
     color: white;
     padding: 280px 280px;
@@ -342,14 +292,7 @@ input[type=submit]{
     top: -700px;
     position: relative;
   }
-.popupbuttons {
 
-    top: 611px;
-    left: 60px;
-    position: absolute;
-    display: flex;
-
-}
 
  @media only screen and (max-width:1500px){
     .logo{
@@ -359,7 +302,7 @@ input[type=submit]{
 
     .menu-header a{
         margin: 26px 30px 26px 30px;
-        font-size: 20px;
+        font-size: 30px;
     }
     .button {
         margin-bottom: 20px;
@@ -388,7 +331,7 @@ input[type=submit]{
     }
     .menu-header a{
         margin: 30px 70px 30px 70px;
-        font-size: 30px;
+        font-size: 25px;
         width: 150px;
     }
     .button {
@@ -403,7 +346,7 @@ input[type=submit]{
     }
     .menu-header a{
         margin: 30px 70px 30px 30px;
-        font-size: 30px;
+        font-size: 20px;
         width: 150px;
     }
     .button {
@@ -412,12 +355,129 @@ input[type=submit]{
 }
 
 @media screen and  (min-width: 500px) {
-    .suggested-albums1 {
+    .suggested-albums1, .my-albums{
     grid-template-columns: 45% 45%;
     }
 }
 @media screen and  (min-width: 960px) {
-    .suggested-albums1 {
+    .suggested-albums1, .my-albums{
     grid-template-columns: 30% 30% 30%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .description {
+        top: 110px;
+        left: 21px;
+    }
+
+    .title {
+        top:0px;
+        left:0px;
+        width:unset;
+        position: relative;
+        text-align: center;
+        font-size: 30px;
+    }
+    .text {
+        top: 0px;
+        left: 0px;
+        width: unset;
+        position: relative;
+        text-align: center;
+    }
+    p {
+        font-size: 17px;
+    }
+    .createButton {
+        left:21%;
+        top:unset;
+        width:unset;
+    }
+    div.suggested {
+        font-size: 30px;
+        top: 39%;
+        left: 6%;
+    }
+    .yours {
+        top: 2030px;
+        left: 6%;
+        font-size: 30px;
+    }
+    .suggested-albums1 {
+        top: 350px
+    }
+    .my-albums{
+        top: 400px;
+    }
+    .album-test {
+        height: 500px;
+    }
+    input[type="submit"] {
+        top: -470px;
+        
+        padding: 180px 170px;
+    }
+
+
+}
+@media screen and (min-width: 450px) and (max-width: 1000px) {
+
+    .description {
+        left:10%;
+        width: 80%;
+    }
+     .title {
+        top:0px;
+        left:0px;
+        width:unset;
+        position: relative;
+        text-align: center;
+        font-size: 30px;
+    }
+    .text {
+        top: 0px;
+        left: 0px;
+        width: unset;
+        position: relative;
+        text-align: center;
+    }
+    p {
+        font-size: 17px;
+    }
+    .createButton {
+        left:21%;
+        top:unset;
+        width:unset;
+    }
+    div.suggested {
+        font-size: 30px;
+        top: 39%;
+        left: 6%;
+    }
+    .yours {
+        top: 2030px;
+        left: 6%;
+        font-size: 30px;
+    }
+    .suggested-albums1 {
+        top: 350px
+    }
+    .my-albums{
+        top: 400px;
+    }
+    .album-test {
+        height: 500px;
+    }
+    input[type="submit"] {
+        top: -470px;
+        
+        padding: 180px 170px;
+    }
+}  
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+    .yours {
+        top:1500px;
     }
 }
