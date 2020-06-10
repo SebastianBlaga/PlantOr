@@ -21,7 +21,7 @@ require 'db.php';
                     <a href="#statistics" onClick="document.location.href='statistics2.php'">Statistics</a>
                     <a class="active"  href="#collection" >Collection</a>
                     <a href="#albums" onClick="document.location.href='album.php'">Albums</a>
-                    <a href="#about" onClick="document.location.href='about.php'">About</a>
+                    <a href="#about" onClick="document.location.href='about2.php'">About</a>
                     <a href="logoutConfirm.php" onClick="document.location.href='logoutConfirm.php'">Log Out</a>
                 </div>
                 <div class="Logo"> <img src='Poze/Logo%20white.svg'></div>

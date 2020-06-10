@@ -42,7 +42,7 @@ session_start();
                     </p>
                 </div>
                     <div class="main-buttons">
-                        <button type="button" id="buton-secundar" >Learn More</button>
+                        <button type="button" id="buton-secundar" onClick="document.location.href='about.php'" >Learn More</button>
                         <button type="button"id="buton-sign-up" onClick="document.location.href='signup.page.php'">Sign Up</button>
                     </div>
                 </div>

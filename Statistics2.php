@@ -23,7 +23,7 @@ require 'Charts.php';
                     <a class="active" href="#statistics" onClick="document.location.href='statistics2.php'">Statistics</a>
                     <a href="#collection" onClick="document.location.href='collection.php'">Collection</a>
                     <a href="#albums" onClick="document.location.href='album.php'">Albums</a>
-                    <a href="#about" onClick="document.location.href='about.php'">About</a>
+                    <a href="#about" onClick="document.location.href='about2.php'">About</a>
                     <a href="#logout" onClick="document.location.href='logoutConfirm.php'">Log Out</a>
                 </div>
                 <div class="Logo"> <img src='Poze/Logo%20white.svg'></div>
