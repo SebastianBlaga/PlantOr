@@ -21,7 +21,7 @@ require 'db.php';
                     <a href="#statistics" onClick="document.location.href='statistics2.php'">Statistics</a>
                     <a class="active"  href="#collection" >Collection</a>
                     <a href="#albums" onClick="document.location.href='album.php'">Albums</a>
-                    <a href="#about" onClick="document.location.href='about.php'">About</a>
+                    <a href="#about" onClick="document.location.href='about2.php'">About</a>
                     <a href="logoutConfirm.php" onClick="document.location.href='logoutConfirm.php'">Log Out</a>
                 </div>
                 <div class="Logo"> <img src='Poze/Logo%20white.svg'></div>
@@ -44,6 +44,11 @@ require 'db.php';
     <div class=Tabel>
     <div class=J3>
 <?php 
+           if(!isset($_SESSION['userId'])){
+            echo "<p>You need to log in first! (:</p> ";
+            }
+        else
+            {
         $sql = "SELECT * FROM plants WHERE idUser=".$_SESSION['userId'];
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
@@ -96,11 +101,16 @@ require 'db.php';
             }
         $count=$count-1;
         }
-        }
+        }}
 ?>
     </div>
 <div class=J4>
 <?php 
+           if(!isset($_SESSION['userId'])){
+            echo " ";
+            }
+        else
+            {
         $sql = "SELECT * FROM plants WHERE idUser=".$_SESSION['userId'];
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
@@ -152,6 +162,7 @@ require 'db.php';
         $count=$count-1;
         }
         }
+    }
 ?>        
  </div>       
 </div>

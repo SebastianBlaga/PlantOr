@@ -20,7 +20,7 @@ session_start();
         <header>
             <div class="menu-header">
                 <div class="menu">
-                    <a href="#statistics"  onClick="document.location.href='statistics.php'">Statistics</a>
+                    <a href="#statistics"  onClick="document.location.href='statistics2.php'">Statistics</a>
                     <a href="#collection"  onClick="document.location.href='Collection.php'">Collection</a>
                     <a class="active" href="#albums"  onClick="document.location.href='Album.php'">Albums</a>
                     <a href="#about" onClick="document.location.href='about.php'">About</a>
@@ -31,6 +31,11 @@ session_start();
 
         <div class="content">
         <?php  
+                   if(!isset($_SESSION['userId'])){
+                    echo "<p>You need to log in first! (:</p> ";
+                    }
+                else
+                    {
 
         include_once 'db.php';
         $var_G = $_GET['plantGroup'];
@@ -55,7 +60,7 @@ session_start();
         echo '</section>';
            }
        }
-        ?>
+    }?>
         
         
 </body>

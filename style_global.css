@@ -2,6 +2,9 @@
     background-color: #cbf8f8;
     background-position: center;
 }
+.mobile-nav{
+    display: none;
+}
 
 .menu-header{
     background-color: #085D70;
@@ -244,18 +247,79 @@ label{
     }
 }
 @media only screen and (max-width:500px){
+    .body{
+        width: 100%;
+    }
+    #group-right{
+        display: none;
+    }
+    #group-left{
+        width:100%;
+        
+    }
     .logo{
-        margin-top: 28px;
-        margin-left: 70px;
-        margin-right: 50px;
+       display:none;
     }
     .menu-header a{
-        margin: 30px 70px 30px 30px;
+        margin: 5%;
         font-size: 20px;
         width: 150px;
+        margin-top:7%;
     }
+    .menu-header{
+        font-size: 12px;
+    }
+
+
     .button {
         margin-bottom: 20px;
+    }
+    #ilustratie
+    {
+        display:none;
+    }
+    #color-logo{
+        width: 280px;
+        margin: 10%;
+        margin-top: 10%;
+    }
+    .main-bg
+    {
+        height: 800px;
+    }
+    .text{
+        padding: 0;
+        margin: 10%;
+        width: 300px;
+        margin-bottom: 20%;
+    }
+    .main-buttons{
+        margin: 10%;
+    }
+    .bg-form{
+        width: 95%;
+        position: absolute;
+        margin-left: 2%;
+    }
+    form{
+        margin-bottom: 0;
+    }
+    input
+    {
+        margin:10px;
+    }
+    h1
+    {
+        font-size:40px;
+        margin-top: 20px;
+    margin-bottom: 10px;
+    }
+    .signup-form{
+        width: 95%;
+        height: 95%;
+        position: absolute;
+        margin-left: 2%;
+        margin-top: 6%;
     }
 }
 

@@ -1,4 +1,5 @@
 <?php
+
 if(!isset($_SESSION))
 {
 session_start();
@@ -24,7 +25,7 @@ session_start();
                     <a href="#statistics" onClick="document.location.href='Statistics2.php'">Statistics</a>
                     <a href="#collection" onClick="document.location.href='Collection.php'">Collection</a>
                     <a class="active" href="#albums">Albums</a>
-                    <a href="#about" onClick="document.location.href='about.php'">About</a>
+                    <a href="#about" onClick="document.location.href='about2.php'">About</a>
                     <a href="logoutConfirm.php" onClick="document.location.href='logoutConfirm.php'">Log Out</a>
                 </div>
                 <div class="Logo"> <img src='img/Logo white.png'></div>
@@ -48,6 +49,11 @@ session_start();
         <div class="suggested-albums1">
             
            <?php
+           if(!isset($_SESSION['userId'])){
+                echo "<p>You need to log in first! (:</p> ";
+                }
+            else
+                {
                 require 'db.php';
                 require 'create_album.php';
                     $sql1 = "SELECT * FROM plants where idUser='$_SESSION[userId]'
@@ -121,7 +127,7 @@ session_start();
                         echo'<input type="submit" value=" ">';
                         echo'</form>';
                         echo'</div>';
-                ?>
+                }?>
 
 
             
@@ -135,6 +141,11 @@ session_start();
         <div class="my-albums">
            
             <?php
+                if(!isset($_SESSION['userId'])){
+                        echo " ";
+                        }
+                    else
+                        {
                 require 'db.php';
                 require 'create_album.php';
                 $sql = "SELECT * FROM albums where idUser=".$_SESSION['userId'];
@@ -167,7 +178,7 @@ session_start();
 
                     }
                 }
-                ?>
+            }?>
         </div>
 
     

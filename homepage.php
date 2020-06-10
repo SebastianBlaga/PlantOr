@@ -15,15 +15,39 @@ session_start();
         <header>
             <div class="menu-header">
             <div class="menu-items">
-            <div class="logo">
+                <div class="logo">
                 <img id="white-logo" src="images/Logo white.png">
-            </div>
+                </div>
             <a class="active" href="#home">Home</a>
             <a href="#about" onClick="document.location.href='about.php'">About</a>
             <a href="#login" id="login-item" onClick="document.location.href='login.page.php'">Log In</a>
             </div>
             </div>
+
+            <!--<div class="mobile-nav">
+            <a href="#home" class="active">PLANTOR</a>
+            <div id="myLinks">
+                <a href="#about">About</a>
+                <a href="#login">Log In</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+            <script>
+            function myFunction(){
+                var x = document.getElementById("myLinks");
+                if(x.style.display="block"){
+                    x.style.display = "none";
+                }else{
+                    x.style.display = "block";
+                }
+                }
+            }
+        </script>-->
+
         </header>
+
         <div class="main-bg">
         <div class="welcome-panel">
             <div id="group-left">
@@ -42,7 +66,7 @@ session_start();
                     </p>
                 </div>
                     <div class="main-buttons">
-                        <button type="button" id="buton-secundar" >Learn More</button>
+                        <button type="button" id="buton-secundar" onClick="document.location.href='about.php'" >Learn More</button>
                         <button type="button"id="buton-sign-up" onClick="document.location.href='signup.page.php'">Sign Up</button>
                     </div>
                 </div>
