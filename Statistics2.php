@@ -59,23 +59,23 @@ require 'Charts.php';
        echo' <div class=C>';
        echo' <div class=Tname>Technical name</div>';
        echo' <div class=Srn1>';
-           echo TN($row[6],1);
+           echo TN($row[6],$_SESSION['userId']);
            echo '</div>';
        echo' <div class=Tname>Common name</div>';
        echo' <div class=Srn1>';
-           echo CN($row[6],1);
+           echo CN($row[6],$_SESSION['userId']);
            echo '</div>';
        echo' <div class=Tname>Plant group</div>';
        echo' <div class=Srn1>';
-           echo PG($row[6],1);
+           echo PG($row[6],$_SESSION['userId']);
            echo '</div>';
        echo' <div class=Tname>Family</div>';
         echo'<div class=Srn1>';
-           echo Family($row[6],1);
+           echo Family($row[6],$_SESSION['userId']);
            echo '</div>';
         echo'<div class=Tname>Species</div>';
        echo' <div class=Srn1>';
-           echo Species($row[6],1);
+           echo Species($row[6],$_SESSION['userId']);
            echo '</div>';
        echo' <div class=EditButton>';
        echo'     <div class=EditTxt>Edit</div>';
@@ -95,10 +95,10 @@ require 'Charts.php';
 
         <div class="yours">Your Statistics</div>
         <div class="Statbox">
-    <div class="NROPC">Nr. of plants collected :<?php echo NROPC(1); ?> </div>
-    <div class="NROPC">Most popular plant group : <?php echo MPPG(1); ?></div>
-    <div class="NROPC">Most popular Family : <?php echo MPF(1); ?></div>
-    <div class="NROPC">Most popular Species :<?php echo MPF(1); ?> </div>
+    <div class="NROPC">Nr. of plants collected :<?php echo NROPC($_SESSION['userId']); ?> </div>
+    <div class="NROPC">Most popular plant group : <?php echo MPPG($_SESSION['userId']); ?></div>
+    <div class="NROPC">Most popular Family : <?php echo MPF($_SESSION['userId']); ?></div>
+    <div class="NROPC">Most popular Species :<?php echo MPF($_SESSION['userId']); ?> </div>
         </div>
  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -109,24 +109,29 @@ require 'Charts.php';
 
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
-          ['Saab',    <?php echo PGC(1,'saab'); ?>],
-          ['volvo',      <?php echo PGC(1,'volvo'); ?>],
-          ['mercedes',  <?php echo PGC(1,'mercedes'); ?>]
+          ['flowering-plants', <?php echo PGC($_SESSION['userId'],'flowering-plants'); ?>],
+          ['conifers-cycads', <?php echo PGC($_SESSION['userId'],'conifers-cycads'); ?>],
+          ['ferns',  <?php echo PGC($_SESSION['userId'],'ferns'); ?>],
+          ['equisetum',  <?php echo PGC($_SESSION['userId'],'liverworts-mosses'); ?>]
         ]);
           
           var data2 = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
-          ['Family1',     <?php echo FamilyC(1,'saab'); ?>],
-          ['Family2',      <?php echo FamilyC(1,'volvo'); ?>],
-          ['Family3',  <?php echo FamilyC(1,'mercedes'); ?>]
+          ['equisetaceae',     <?php echo FamilyC($_SESSION['userId'],'equisetaceae'); ?>],
+          ['ericaceae',      <?php echo FamilyC($_SESSION['userId'],'ericaceae'); ?>],
+          ['asteraceae',  <?php echo FamilyC($_SESSION['userId'],'asteraceae'); ?>],
+          ['rosaceae',      <?php echo FamilyC($_SESSION['userId'],'rosaceae'); ?>],
+          ['proteaceae',  <?php echo FamilyC($_SESSION['userId'],'proteaceae'); ?>]
         ]);
           
           
           var data3 = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
-          ['Species1',    <?php echo SpeciesC(1,'volvo'); ?>],
-          ['Species2',      <?php echo SpeciesC(1,'saab'); ?>],
-          ['Species3',  <?php echo SpeciesC(1,'mercedes'); ?>]
+          ['banksia',    <?php echo SpeciesC($_SESSION['userId'],'banksia'); ?>],
+          ['salvia',      <?php echo SpeciesC($_SESSION['userId'],'salvia'); ?>],
+          ['equisetum',  <?php echo SpeciesC($_SESSION['userId'],'equisetum'); ?>],
+          ['pavonia',      <?php echo SpeciesC($_SESSION['userId'],'pavonia'); ?>],
+          ['erica',  <?php echo SpeciesC($_SESSION['userId'],'erica'); ?>]
         ]);
 
         var options = {
@@ -175,6 +180,7 @@ $result=mysqli_query($conn,$sql)
 </form>
 </div>  
 </div>
+
 </body>
 
 </html>
