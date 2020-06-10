@@ -32,29 +32,33 @@ session_start();
         <div class="content">
         <?php  
 
+        
         include_once 'db.php';
-        $var_G = $_GET['plantGroup'];
-   
-        $var_F = $_GET['plantFamily'];
-
-        $var_S = $_GET['plantSpecies'];
-  
-        $sql = "SELECT * FROM plants where idUser='$_SESSION[userId]'
-        and PlantGroup='$var_G' and Family='$var_F' and Species='$var_S'";
+        include 'create_album.php';
        
-       $result = $conn->query($sql);
+        
+        $sql = "SELECT * FROM albums where idUser='$_SESSION[userId]' AND nume=$name;";
+        $stmt = mysqli_stmt_init($conn);
+        if(!mysqli_stmt_prepare($stmt, $sql)) {
+            echo "SQL statement failed!";
+        } else {
+            mysqli_stmt_execute($stmt);
+            $result = mysqli_stmt_get_result($stmt);
+            $pspecies = PSpecies($row[5],$_SESSION['userId']);
+            $sql = "SELECT * FROM plants where idUser='$_SESSION[userId]' and Species='$pspecies'";
 
-       if ($result->num_rows > 0) {
-       while($row = $result->fetch_row()){
-
-        echo 
-        '<section>';
-        echo '<img src="img/plants/'; echo $row[7]; echo'">';
-        echo '<h1>'; echo"Family: "; echo $row[4]; echo'</h1>';
-        echo '<h1>'; echo $row[5]; echo'</h1>';
-        echo '</section>';
-           }
-       }
+            while ($row = mysqli_fetch_assoc($result))  {
+                echo 
+                    '<section>
+                    <img src="img/plants/'.$row["imageName"].'">
+                    <h1>'.$row["PlantGroup"].'</h1>
+                    <h2>'.$row["Family"].'</h2>
+              
+                </section>';
+                echo View($_SESSION['userId'],$row['PlantGroup'],$row['Family'],$row['Species']);
+            }
+        }
+    
         ?>
         
         

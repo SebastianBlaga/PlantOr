@@ -167,11 +167,29 @@ require 'create_album.php';
         <p>Name</p>
         <input type="text" name="albumname" class="inputBar">
         <p>Select group</p>
-        <input type="text" name="plantGroup" class="inputBar">
+        <select class="inputBar" name="plantGroup">
+                <option value="flowering-plants">flowering-plants</option>
+                <option value="conifers-cycads">conifers-cycads</option>
+                <option value="liverworts-mosses">liverworts-mosses</option>
+                <option value="ferns">ferns</option>
+                </select>
         <p>Select family</p>
-        <input type="text" name="plantFamily" class="inputBar">
+        <select class="inputBar" name="plantFamily">
+                <option value="equisetaceae">equisetaceae</option>
+                <option value="ericaceae">ericaceae</option>
+                <option value="asteraceae">asteraceae</option>
+                <option value="rosaceae">rosaceae</option>
+                <option value="proteaceae">proteaceae</option>
+                </select>
         <p>Select species</p>
-        <input type="text" name="plantSpecies" class="inputBar">
+        <select class="inputBar" name="plantSpecies">
+                <option value="banksia">banksia</option>
+                <option value="salvia">salvia</option>
+                <option value="equisetum">quisetum</option>
+                <option value="pavonia">pavonia</option>
+                <option value="erica">erica</option>
+                </select>
+        
         <?php
             if(isset($_GET['error'])){
                 if($_GET['error']=="invalidname")
@@ -187,7 +205,7 @@ require 'create_album.php';
         </div>
         <div class="popupbuttons">
             <button type="button" id="verde" onClick="document.location.href='Album.php'"> Cancel</button>
-            <button type="button" name="createAlbum_submit" id="verde"> Create Album</button>
+            <button type="submit" name='submit2' id="verde"> Create Album</button>
         </div>
      </form>
 </div>

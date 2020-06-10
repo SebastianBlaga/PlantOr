@@ -12,6 +12,7 @@ session_start();
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="Album.css" />
+    <link rel="stylesheet" href="style_albumview" />
 </head>
 
 <body>
@@ -45,118 +46,139 @@ session_start();
 
         <div class="my-albums">
             
-                <div class="album-test" onClick="document.location.href='albumView.php'">
-                    <div class="picture">
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                    </div>
-                    <h1>Medical plants</h1>
-                    <h2>120 plants</h2>
-                </div>
-                <div class="album-test">
-                    <div class="picture">
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                    </div>
-                    <h1>Suggested album 1</h1>
-                    <h2>120 plants</h2>
-                </div>
-                <div class="album-test">
-                 <div class="picture">
-                    <img class="art" src="img/frunze.png"/>
-                    <img class="art" src="img/frunze.png"/>
-                    <img class="art" src="img/frunze.png"/>
-                    <img class="art" src="img/frunze.png"/>
-                 </div>
-                    <h1>Suggested album 1</h1>
-                    <h2>120 plants</h2>     
-                </div>
+           <?php
+                require 'db.php';
+                require 'create_album.php';
+                    $sql1 = "SELECT * FROM plants where idUser='$_SESSION[userId]'
+                    and PlantGroup='volvo' and Family='volvo' and Species='volvo'";
+                    $result1= $conn->query($sql1);
+                    $r1 = $result1->num_rows;
+                        echo '<div class="album-test">';
+                        echo' <div class="picture">';
+                        echo' <img class="art" src="img/frunze.png"/>';
+                        echo' <img class="art" src="img/frunze.png"/>';
+                        echo' <img class="art" src="img/frunze.png"/>';
+                        echo' <img class="art" src="img/frunze.png"/>';
+                        echo'</div>';
+                        echo'<h1>';
+                        echo "Medical";  
+                        echo'</h1>';
+                        echo'<h2> ';
+                        echo $r1; 
+                        echo'</h2>';
+                        echo'<form method="get" action="albumView.php">';
+                        echo'<input type="hidden" name="plantGroup" value='; echo "volvo"; echo'>';
+                        echo'<input type="hidden" name="plantFamily" value='; echo "volvo"; echo'>';
+                        echo'<input type="hidden" name="plantSpecies" value='; echo "volvo"; echo'>';
+                        echo'<input type="submit" value=" ">';
+                        echo'</form>';
+                        echo'</div>';
+                ?>
+                <?php
+                require 'db.php';
+                require 'create_album.php';
+                    $sql1 = "SELECT * FROM plants where idUser='$_SESSION[userId]'
+                    and PlantGroup='volvo' and Family='volvo' and Species='volvo'";
+                    $result1= $conn->query($sql1);
+                    $r1 = $result1->num_rows;
+                        echo '<div class="album-test">';
+                        echo' <div class="picture">';
+                        echo' <img class="art" src="img/frunze.png"/>';
+                        echo' <img class="art" src="img/frunze.png"/>';
+                        echo' <img class="art" src="img/frunze.png"/>';
+                        echo' <img class="art" src="img/frunze.png"/>';
+                        echo'</div>';
+                        echo'<h1>';
+                        echo "Medical";  
+                        echo'</h1>';
+                        echo'<h2> ';
+                        echo $r1; 
+                        echo'</h2>';
+                        echo'<form method="get" action="albumView.php">';
+                        echo'<input type="hidden" name="plantGroup" value='; echo "volvo"; echo'>';
+                        echo'<input type="hidden" name="plantFamily" value='; echo "volvo"; echo'>';
+                        echo'<input type="hidden" name="plantSpecies" value='; echo "volvo"; echo'>';
+                        echo'<input type="submit" value=" ">';
+                        echo'</form>';
+                        echo'</div>';
+                ?>
+                <?php
+                require 'db.php';
+                require 'create_album.php';
+                    $sql1 = "SELECT * FROM plants where idUser='$_SESSION[userId]'
+                    and PlantGroup='volvo' and Family='volvo' and Species='volvo'";
+                    $result1= $conn->query($sql1);
+                    $r1 = $result1->num_rows;
+                        echo '<div class="album-test">';
+                        echo' <div class="picture">';
+                        echo' <img class="art" src="img/frunze.png"/>';
+                        echo' <img class="art" src="img/frunze.png"/>';
+                        echo' <img class="art" src="img/frunze.png"/>';
+                        echo' <img class="art" src="img/frunze.png"/>';
+                        echo'</div>';
+                        echo'<h1>';
+                        echo "Medical";  
+                        echo'</h1>';
+                        echo'<h2> ';
+                        echo $r1; 
+                        echo'</h2>';
+                        echo'<form method="get" action="albumView.php">';
+                        echo'<input type="hidden" name="plantGroup" value='; echo "volvo"; echo'>';
+                        echo'<input type="hidden" name="plantFamily" value='; echo "volvo"; echo'>';
+                        echo'<input type="hidden" name="plantSpecies" value='; echo "volvo"; echo'>';
+                        echo'<input type="submit" value=" ">';
+                        echo'</form>';
+                        echo'</div>';
+                ?>
+
+
             
         </div>
 
 
         <div class="yours">Your albums</div>
 
-        <div class="suggested-albums1">
-            <div class="album-list">
-                <div class="album-test">
-                    <div class="picture">
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                    </div>
-                    <h1>My album 1</h1>
-                    <h2>120 plants</h2>
-                </div>
-                <div class="album-test">
-                    <div class="picture">
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                    </div>
-                    <h1>My album 1</h1>
-                    <h2>120 plants</h2>
-                </div>
-                <div class="album-test">
-                    <div class="picture">
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                    </div>
-                    <h1>My album 1</h1>
-                    <h2>120 plants</h2>
-                </div>
-            </div>
-        </div>
+
         <br><br>
         <div class="suggested-albums1">
-            <div class="album-list">
+           
             <?php
+                require 'db.php';
                 require 'create_album.php';
-                if ($_GET['error']=="noerror")
-                {
-                    
-                    echo '<div class="album-test">
-                    <div class="picture">
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                    </div>
-                    <h1>My album 1</h1>
-                    <h2>120 plants</h2>
-                </div>';
-            
+                $sql = "SELECT * FROM albums where idUser=".$_SESSION['userId'];
+                $result = $conn->query($sql);
+                
+                if ($result->num_rows > 0) {
+                while($row = $result->fetch_row()){
+                    $sql1 = "SELECT * FROM plants where idUser='$_SESSION[userId]'
+                    and PlantGroup='$row[3]' and Family='$row[4]' and Species='$row[5]'";
+                    $result1= $conn->query($sql1);
+                    $r1 = $result1->num_rows;
+                        echo '<div class="album-test">';
+                        echo' <div class="picture">';
+                        echo' <img class="art" src="img/frunze.png"/>';
+                        echo' <img class="art" src="img/frunze.png"/>';
+                        echo' <img class="art" src="img/frunze.png"/>';
+                        echo' <img class="art" src="img/frunze.png"/>';
+                        echo'</div>';
+                        echo'<h1>';
+                        echo $row[1];  
+                        echo'</h1>';
+                        echo'<h2> ';
+                        echo $r1; 
+                        echo'</h2>';
+                        echo'<form method="get" action="albumView.php">';
+                        echo'<input type="hidden" name="plantGroup" value='; echo $row[3]; echo'>';
+                        echo'<input type="hidden" name="plantFamily" value='; echo $row[4]; echo'>';
+                        echo'<input type="hidden" name="plantSpecies" value='; echo $row[5]; echo'>';
+                        echo'<input type="submit" value=" ">';
+                        echo'</form>';
+                        echo'</div>';
+
+
+                    }
                 }
                 ?>
-                <div class="album-test">
-                    <div class="picture">
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                    </div>
-                    <h1>My album 1</h1>
-                    <h2>120 plants</h2>
-                </div>
-                <div class="album-test">
-                    <div class="picture">
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                        <img class="art" src="img/frunze.png"/>
-                    </div>
-                    <h1>My album 1</h1>
-                    <h2>120 plants</h2>
-                </div>
-            </div>
         </div>
 
     
