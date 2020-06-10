@@ -22,10 +22,7 @@
     justify-content: flex-end;
     margin: 10px;
 }
-<<<<<<< HEAD
-=======
 @media only screen and (max-width:1500px){
->>>>>>> Andrei
 .menu {
 
     display: flex;
@@ -303,18 +300,6 @@ height: 27px;
 text-align: left;
 }
 .removeButton{
-<<<<<<< HEAD
-margin:10px 1px 1px 5px;
-height: 35px;
-width: 80%;
-border: 5px solid #EA3F28;
-border-radius: 50px;
-opacity: 1;
-text-align: center;
-font: Bold 100%/100% Segoe UI;
-}
-.EditButton{
-=======
     margin:10px 1px 1px 5px;
     height: 45px;
     width: 85%;
@@ -331,7 +316,6 @@ font: Bold 100%/100% Segoe UI;
 
 @media only screen and (max-width:1000px){
 .Tname{
->>>>>>> Andrei
 margin:10px 1px 1px 5px;
 text-align: left;
 font: Bold 10px/10px Segoe UI;
