@@ -99,6 +99,11 @@ require 'db.php';
     <div class=Tabel>
     <div class=J3>
 <?php 
+           if(!isset($_SESSION['userId'])){
+            echo "<p>You need to log in first! (:</p> ";
+            }
+        else
+            {
         $sql = "SELECT * FROM plants WHERE idUser=".$_SESSION['userId'];
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
@@ -151,11 +156,16 @@ require 'db.php';
             }
         $count=$count-1;
         }
-        }
+        }}
 ?>
     </div>
 <div class=J4>
 <?php 
+           if(!isset($_SESSION['userId'])){
+            echo "  ";
+            }
+        else
+            {
         $sql = "SELECT * FROM plants WHERE idUser=".$_SESSION['userId'];
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
@@ -206,7 +216,7 @@ require 'db.php';
             }
         $count=$count-1;
         }
-        }
+        }}
 ?>        
  </div>       
 </div>

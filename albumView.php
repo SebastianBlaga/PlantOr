@@ -31,6 +31,11 @@ session_start();
 
         <div class="content">
         <?php  
+                   if(!isset($_SESSION['userId'])){
+                    echo "<p>You need to log in first! (:</p> ";
+                    }
+                else
+                    {
 
         include_once 'db.php';
         $var_G = $_GET['plantGroup'];
@@ -55,7 +60,7 @@ session_start();
         echo '</section>';
            }
        }
-        ?>
+    }?>
         
         
 </body>

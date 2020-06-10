@@ -43,6 +43,11 @@ require 'Charts.php';
         <div class="suggested"> Most popular collected plants</div>
 <div class="AfisarePlante">
 <?php 
+           if(!isset($_SESSION['userId'])){
+            echo "<p>You need to log in first! (:</p> ";
+            }
+        else
+            {
         $sql = "select * from plants group by TechnicalName order by count(TechnicalName) desc limit 4";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
@@ -95,17 +100,37 @@ require 'Charts.php';
             }
         $count=$count-1;
         }
-        }
+        }}
 ?>
 </div>
         
 
         <div class="yours">Your Statistics</div>
         <div class="Statbox">
-    <div class="NROPC">Nr. of plants collected :<?php echo NROPC($_SESSION['userId']); ?> </div>
-    <div class="NROPC">Most popular plant group : <?php echo MPPG($_SESSION['userId']); ?></div>
-    <div class="NROPC">Most popular Family : <?php echo MPF($_SESSION['userId']); ?></div>
-    <div class="NROPC">Most popular Species :<?php echo MPF($_SESSION['userId']); ?> </div>
+    <div class="NROPC">Nr. of plants collected :<?php           
+        if(!isset($_SESSION['userId'])){
+                echo " ";
+                }
+            else
+                { echo NROPC($_SESSION['userId']);} ?> </div>
+    <div class="NROPC">Most popular plant group : <?php            
+    if(!isset($_SESSION['userId'])){
+                echo " ";
+                }
+            else
+                { echo MPPG($_SESSION['userId']);} ?></div>
+    <div class="NROPC">Most popular Family : <?php
+               if(!isset($_SESSION['userId'])){
+                echo " ";
+                }
+            else
+                { echo MPF($_SESSION['userId']); }?></div>
+    <div class="NROPC">Most popular Species :<?php 
+               if(!isset($_SESSION['userId'])){
+                echo " ";
+                }
+            else
+                {echo MPF($_SESSION['userId']);} ?> </div>
         </div>
  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -172,8 +197,13 @@ require 'Charts.php';
     </div>
 <div class="Exports">
 <?php   
+           if(!isset($_SESSION['userId'])){
+            echo "<p>You need to log in first! (:</p> ";
+            }
+        else
+            {
 $sql="SELECT * FROM plants order by idPlant";    
-$result=mysqli_query($conn,$sql)    
+$result=mysqli_query($conn,$sql);  }  
 ?> 
 <div>
 <form method="post" action="export.php" align="center">  

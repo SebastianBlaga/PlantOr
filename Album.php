@@ -1,4 +1,5 @@
 <?php
+
 if(!isset($_SESSION))
 {
 session_start();
@@ -47,6 +48,11 @@ session_start();
         <div class="my-albums">
             
            <?php
+           if(!isset($_SESSION['userId'])){
+                echo "<p>You need to log in first! (:</p> ";
+                }
+            else
+                {
                 require 'db.php';
                 require 'create_album.php';
                     $sql1 = "SELECT * FROM plants where idUser='$_SESSION[userId]'
@@ -129,7 +135,7 @@ session_start();
                         echo'<input type="submit" value=" ">';
                         echo'</form>';
                         echo'</div>';
-                ?>
+                }?>
 
 
             
@@ -143,6 +149,11 @@ session_start();
         <div class="suggested-albums1">
            
             <?php
+                if(!isset($_SESSION['userId'])){
+                        echo " ";
+                        }
+                    else
+                        {
                 require 'db.php';
                 require 'create_album.php';
                 $sql = "SELECT * FROM albums where idUser=".$_SESSION['userId'];
@@ -178,7 +189,7 @@ session_start();
 
                     }
                 }
-                ?>
+            }?>
         </div>
 
     

@@ -117,6 +117,11 @@ require 'create_album.php';
         <div class="suggested-albums1">
             <div class="album-list">
             <?php
+                       if(!isset($_SESSION['userId'])){
+                        echo "<p>You need to log in first! (:</p> ";
+                        }
+                    else
+                        {
                 require 'create_album.php';
                 if ($_GET['error']=="noerror")
                 {
@@ -132,7 +137,7 @@ require 'create_album.php';
                     <h2>120 plants</h2>
                 </div>';
             
-                }
+                }}
                 ?>
                 <div class="album-test">
                     <div class="picture">
